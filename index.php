@@ -7,7 +7,7 @@ include('config/db_config.php');
 // session_start();
 //variable declaration
 $alert_msg = '';
-include('insert_user.php');
+// include('insert_user.php');
 //sign in button
 if (isset($_POST['signin'])) {
   //to check if data are passed
@@ -165,7 +165,7 @@ if (isset($_POST['signin'])) {
   </div><!-- /.login-box -->
 </body>
 
-<?php include('adduser_modal.php'); ?>
+
 
 <!-- jQuery 3 -->
 <script src="plugins/jquery/jquery.min.js"></script>
