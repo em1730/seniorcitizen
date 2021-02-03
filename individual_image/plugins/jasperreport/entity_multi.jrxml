@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.8.0.final using JasperReports Library version 6.14.0-2ab0d8625be255bf609c78e1181801213e51db8f  -->
+<!-- 2020-11-16T16:52:27 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="entity_id" language="javascript" pageWidth="612" pageHeight="792" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a8b35d81-fbfe-4639-a04a-fd350f424dec">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="sccdrrmo.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="entity_no1" class="java.lang.String"/>
+	<parameter name="fullname1" class="java.lang.String"/>
+	<parameter name="street1" class="java.lang.String"/>
+	<parameter name="barangay1" class="java.lang.String"/>
+	<parameter name="mobile_no1" class="java.lang.String"/>
+	<parameter name="photo1" class="java.lang.String"/>
+	<parameter name="entity_no3" class="java.lang.String"/>
+	<parameter name="fullname3" class="java.lang.String"/>
+	<parameter name="street3" class="java.lang.String"/>
+	<parameter name="barangay3" class="java.lang.String"/>
+	<parameter name="mobile_no3" class="java.lang.String"/>
+	<parameter name="photo3" class="java.lang.String"/>
+	<parameter name="entity_no4" class="java.lang.String"/>
+	<parameter name="fullname4" class="java.lang.String"/>
+	<parameter name="street4" class="java.lang.String"/>
+	<parameter name="barangay4" class="java.lang.String"/>
+	<parameter name="mobile_no4" class="java.lang.String"/>
+	<parameter name="photo4" class="java.lang.String"/>
+	<parameter name="entity_no5" class="java.lang.String"/>
+	<parameter name="fullname5" class="java.lang.String"/>
+	<parameter name="street5" class="java.lang.String"/>
+	<parameter name="barangay5" class="java.lang.String"/>
+	<parameter name="mobile_no5" class="java.lang.String"/>
+	<parameter name="photo5" class="java.lang.String"/>
+	<parameter name="entity_no6" class="java.lang.String"/>
+	<parameter name="fullname6" class="java.lang.String"/>
+	<parameter name="street6" class="java.lang.String"/>
+	<parameter name="barangay6" class="java.lang.String"/>
+	<parameter name="mobile_no6" class="java.lang.String"/>
+	<parameter name="photo6" class="java.lang.String"/>
+	<parameter name="entity_no7" class="java.lang.String"/>
+	<parameter name="fullname7" class="java.lang.String"/>
+	<parameter name="street7" class="java.lang.String"/>
+	<parameter name="barangay7" class="java.lang.String"/>
+	<parameter name="mobile_no7" class="java.lang.String"/>
+	<parameter name="photo7" class="java.lang.String"/>
+	<parameter name="entity_no8" class="java.lang.String"/>
+	<parameter name="fullname8" class="java.lang.String"/>
+	<parameter name="street8" class="java.lang.String"/>
+	<parameter name="barangay8" class="java.lang.String"/>
+	<parameter name="mobile_no8" class="java.lang.String"/>
+	<parameter name="photo8" class="java.lang.String"/>
+	<parameter name="entity_no9" class="java.lang.String"/>
+	<parameter name="fullname9" class="java.lang.String"/>
+	<parameter name="street9" class="java.lang.String"/>
+	<parameter name="barangay9" class="java.lang.String"/>
+	<parameter name="mobile_no9" class="java.lang.String"/>
+	<parameter name="photo9" class="java.lang.String"/>
+	<parameter name="Parameter1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from tbl_individual]]>
+	</queryString>
+	<field name="entity_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="entity_no"/>
+		<property name="com.jaspersoft.studio.field.label" value="entity_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date_register" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="date_register"/>
+		<property name="com.jaspersoft.studio.field.label" value="date_register"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="username" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="username"/>
+		<property name="com.jaspersoft.studio.field.label" value="username"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="password" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="password"/>
+		<property name="com.jaspersoft.studio.field.label" value="password"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fullname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fullname"/>
+		<property name="com.jaspersoft.studio.field.label" value="fullname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="firstname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="firstname"/>
+		<property name="com.jaspersoft.studio.field.label" value="firstname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="middlename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="middlename"/>
+		<property name="com.jaspersoft.studio.field.label" value="middlename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lastname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="lastname"/>
+		<property name="com.jaspersoft.studio.field.label" value="lastname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="barangay" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="barangay"/>
+		<property name="com.jaspersoft.studio.field.label" value="barangay"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="photo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="photo"/>
+		<property name="com.jaspersoft.studio.field.label" value="photo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="street" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="street"/>
+		<property name="com.jaspersoft.studio.field.label" value="street"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="age" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="age"/>
+		<property name="com.jaspersoft.studio.field.label" value="age"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="gender"/>
+		<property name="com.jaspersoft.studio.field.label" value="gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="birthdate" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="birthdate"/>
+		<property name="com.jaspersoft.studio.field.label" value="birthdate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="city" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="city"/>
+		<property name="com.jaspersoft.studio.field.label" value="city"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="province" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="province"/>
+		<property name="com.jaspersoft.studio.field.label" value="province"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mobile_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="mobile_no"/>
+		<property name="com.jaspersoft.studio.field.label" value="mobile_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telephone_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="telephone_no"/>
+		<property name="com.jaspersoft.studio.field.label" value="telephone_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_individual"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="firstname1" class="java.lang.Integer" calculation="DistinctCount">
+		<variableExpression><![CDATA[$F{firstname}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="274">
+			<rectangle>
+				<reportElement x="14" y="13" width="171" height="251" uuid="5c939d51-0462-4833-90cd-b88ff5b3f20d"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="25" y="25" width="148" height="229" uuid="5a7315d0-280a-437d-ade2-5d99bad4daef"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="25" y="66" width="148" height="20" uuid="94c9547e-ba33-4ff0-8f4d-f30e024e0443"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{entity_no}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="24" y="180" width="149" height="20" uuid="e772f05b-2c4b-4061-9822-8221b8f9c0a1"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fullname}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="45" y="193" width="106" height="1" uuid="04e76bf5-440c-4d25-9ede-b6421b26ed6a"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="25" y="32" width="148" height="20" uuid="db144fa5-c7f7-4bd6-8b35-3a1ad5a4b179"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="39" width="148" height="20" uuid="fc047bdd-ed00-4890-b69e-cd620c9d2c34"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Province of Negros Occidental]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="47" width="148" height="20" uuid="a0ae2c5a-8a6d-472e-9acf-2a5e0bb1562b"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[CITY OF SAN CARLOS]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="25" y="209" width="148" height="24" isPrintWhenDetailOverflows="true" uuid="a65d562e-c889-4c38-b64c-753ed943457e"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$F{street}+",  "+$F{barangay}+" "]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="25" y="240" width="148" height="16" uuid="45d88d26-c42f-4f1f-afab-a7fb2b6a49ca"/>
+				<textElement textAlignment="Center">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobile_no}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="231" width="148" height="20" uuid="54f6abee-a57e-4908-866e-46edabf22a9b"/>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Contact No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="200" width="148" height="20" uuid="6ca070f0-e65e-4741-9fd3-957e7e1b6c0b"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="90" y="90" width="87" height="80" uuid="0f4872a7-2acd-4432-88af-61266df78355">
+					<property name="com.jaspersoft.studio.unit.margin" value="px"/>
+				</reportElement>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" margin="1" qrVersion="2">
+					<jr:codeExpression><![CDATA[$F{entity_no}]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
+			<image scaleImage="RetainShape" rotation="None" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement x="36" y="90" width="60" height="76" uuid="ea6ff3d5-3b96-4c48-b631-792ef2bc48f1"/>
+				<box>
+					<topPen lineWidth="3.0"/>
+					<leftPen lineWidth="3.0"/>
+					<bottomPen lineWidth="3.0"/>
+					<rightPen lineWidth="3.0"/>
+				</box>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/flutter/images/"+$F{photo}+""]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="28" y="32" width="25" height="25" uuid="a6f4c163-0b5d-4dbd-8afd-54f1dc030c5d"/>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/plugins/jasperreport/LOGO-png.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="215" y="13" width="171" height="251" uuid="6b52242e-4cbd-4fa9-b821-3566f9957a26"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="226" y="25" width="148" height="229" uuid="d16cb4ee-b12f-4de8-8f5b-bb26527667ca"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="226" y="66" width="148" height="20" uuid="2ca108f8-7500-478d-917c-20b8a053b010"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{entity_no1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="225" y="180" width="149" height="20" uuid="118dd998-897e-4fd3-a8ec-fb65da77e5aa"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fullname1}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="246" y="193" width="106" height="1" uuid="365172a2-4f7f-4130-b824-b8faab04ea18"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="226" y="32" width="148" height="20" uuid="d4b0e04d-33d5-4e4d-9590-3abcc4cb06fc"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="39" width="148" height="20" uuid="c469bc5a-7ace-4b1d-a0a6-4c44ecf0ee79"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Province of Negros Occidental]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="47" width="148" height="20" uuid="4a9ba1e4-4fb5-47d7-b1c2-c6f2f00bb1a3"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[CITY OF SAN CARLOS]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="226" y="209" width="148" height="24" isPrintWhenDetailOverflows="true" uuid="0b2e0172-d250-4f43-bb90-3e89ac6b4624"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{street1}+", "+$P{barangay1}+" "]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="226" y="240" width="148" height="16" uuid="35edc664-9625-4640-9403-96ec942f4caa"/>
+				<textElement textAlignment="Center">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mobile_no1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="226" y="231" width="148" height="20" uuid="5ab9eeb6-c0ce-4be8-8b74-40f43abdcc39"/>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Contact No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="200" width="148" height="20" uuid="b4977251-ba90-4f66-a902-18b01446c53b"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="291" y="90" width="86" height="79" uuid="cf5fbb4d-2152-49ae-8dad-8f06b440a58a">
+					<property name="com.jaspersoft.studio.unit.margin" value="px"/>
+				</reportElement>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" margin="1" qrVersion="2">
+					<jr:codeExpression><![CDATA[$P{entity_no1}]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
+			<image scaleImage="RetainShape" rotation="None" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement isPrintRepeatedValues="false" x="237" y="90" width="60" height="76" uuid="6fab2f31-a2b3-41bb-83c3-a9432261b6bd"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/flutter/images/"+$P{photo1}+""]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="229" y="32" width="25" height="25" uuid="8e4ac1d6-7b08-4088-b8c7-501d6ae7a3c1"/>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/plugins/jasperreport/LOGO-png.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="414" y="13" width="171" height="251" uuid="243c8846-4327-42de-806f-f52846ea8c32"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="425" y="25" width="148" height="229" uuid="5618a0c2-d503-424c-a0a4-9c5eb51e4d03"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="425" y="66" width="148" height="20" uuid="613c03d5-bed9-45bd-ac3c-144d5dea4e4a"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{entity_no3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="424" y="180" width="149" height="20" uuid="7b3a5c69-547d-414b-813b-7a328a70a45d"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fullname3}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="445" y="193" width="106" height="1" uuid="f6f15139-17f7-4ba3-ac8a-90e3f9faf2fb"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="425" y="32" width="148" height="20" uuid="e50a4686-27fa-4b6f-ba3c-3a264064bffb"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="39" width="148" height="20" uuid="b9d4fd3c-694e-47a5-b0a4-c3213e5b802a"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Province of Negros Occidental]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="47" width="148" height="20" uuid="5194aaf7-94f2-44a7-a4fa-f75e51c265c7"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[CITY OF SAN CARLOS]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="425" y="209" width="148" height="24" isPrintWhenDetailOverflows="true" uuid="0695d17e-0926-4b2c-8106-f9883538b305"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{street3}+", "+$P{barangay3}+" "]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="425" y="240" width="148" height="16" uuid="b20e76e8-f383-40b6-b0f2-b1e9e2ebae8c"/>
+				<textElement textAlignment="Center">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mobile_no3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="425" y="231" width="148" height="20" uuid="0dc1662e-0c36-4f1b-97b1-e6f36d15d60b"/>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Contact No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="200" width="148" height="20" uuid="206d56b3-e1c7-4802-86b0-3ef9562af429"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="490" y="90" width="85" height="78" uuid="78c1b509-2a35-4030-a488-2c9df0c520f2">
+					<property name="com.jaspersoft.studio.unit.margin" value="px"/>
+				</reportElement>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" margin="1" qrVersion="2">
+					<jr:codeExpression><![CDATA[$P{entity_no3}]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
+			<image scaleImage="RetainShape" rotation="None" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement isPrintRepeatedValues="false" x="436" y="90" width="60" height="76" uuid="66d9ce9e-a085-4fcf-8d32-87fd9b270c30"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/flutter/images/"+$P{photo3}+""]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="428" y="32" width="25" height="25" uuid="374680aa-68d6-40b6-8027-4ffb79fdef54"/>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/plugins/jasperreport/LOGO-png.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="518">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement x="13" y="3" width="171" height="251" uuid="92b6999e-abb2-424d-8591-ed88971ce7b7"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="24" y="15" width="148" height="229" uuid="e37a9a22-8805-4243-a88f-19c1de3885df"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="24" y="56" width="148" height="20" uuid="aded09be-2890-41cc-8c1b-0a903de23aa7"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{entity_no4}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="23" y="170" width="149" height="20" uuid="d2818eab-338d-4453-a389-c3896d35e2c4"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fullname4}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="44" y="183" width="106" height="1" uuid="09e54c98-e2f0-49fa-924e-c61f8f6f47df"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="24" y="22" width="148" height="20" uuid="261efee5-ceba-462a-8221-256483f85e35"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="29" width="148" height="20" uuid="7edd35fa-91bc-4d18-83d1-41cc6d941fd7"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Province of Negros Occidental]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="37" width="148" height="20" uuid="e950543e-f339-4ff2-9b43-910112c47cb4"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[CITY OF SAN CARLOS]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="24" y="199" width="148" height="24" isPrintWhenDetailOverflows="true" uuid="9d190071-ad80-4f9d-92fa-d9de175876f3"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{street4}+",  "+$P{barangay4}+" "]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="24" y="230" width="148" height="16" uuid="5eb4a0de-d43c-4352-b0f3-71f89e9c3dc3"/>
+				<textElement textAlignment="Center">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mobile_no4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="24" y="221" width="148" height="20" uuid="01d6a5fd-792a-4f19-8ae1-fac8ff6e2434"/>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Contact No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="190" width="148" height="20" uuid="e451d56a-cbea-4829-9321-380a2f40cb4d"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="89" y="80" width="81" height="74" uuid="aea42cdb-88fc-4687-9908-da41b986f191">
+					<property name="com.jaspersoft.studio.unit.margin" value="px"/>
+				</reportElement>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" margin="1" qrVersion="2">
+					<jr:codeExpression><![CDATA[$P{entity_no4}]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
+			<image scaleImage="RetainShape" rotation="None" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement x="35" y="80" width="60" height="76" uuid="85f49553-6879-4357-9a90-5d77032a8f25"/>
+				<box>
+					<topPen lineWidth="3.0"/>
+					<leftPen lineWidth="3.0"/>
+					<bottomPen lineWidth="3.0"/>
+					<rightPen lineWidth="3.0"/>
+				</box>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/flutter/images/"+$P{photo4}+""]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="27" y="22" width="25" height="25" uuid="38969515-3ea5-4e71-9020-d9a8ba1318d5"/>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/plugins/jasperreport/LOGO-png.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="214" y="3" width="171" height="251" uuid="337b2221-15cd-43f5-99d2-b7bd2a2eb6b6"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="225" y="15" width="148" height="229" uuid="f5c37fa3-0ab9-4456-91f8-fdf671c6a6e3"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="225" y="56" width="148" height="20" uuid="b5caaadd-afbf-494d-b647-f50945910fe0"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{entity_no5}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="224" y="170" width="149" height="20" uuid="f734934d-94ec-49e2-b87a-6e38c1f83aa4"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fullname5}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="245" y="183" width="106" height="1" uuid="a2debb2a-3659-4c21-9d9e-4c946c31bce0"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="225" y="22" width="148" height="20" uuid="c4f74c89-f5f8-48f8-9470-ac5be85e5fee"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="29" width="148" height="20" uuid="38f2e60e-c5f8-471f-a927-725465696d4f"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Province of Negros Occidental]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="37" width="148" height="20" uuid="3a3ffc22-902a-4a71-914d-333c25b0fc5e"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[CITY OF SAN CARLOS]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="225" y="199" width="148" height="24" isPrintWhenDetailOverflows="true" uuid="d2f9e60a-7178-420f-93c9-48266bfe79e2"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{street5}+", "+$P{barangay5}+" "]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="225" y="230" width="148" height="16" uuid="87767342-a73b-4f88-96dc-863739cd8cff"/>
+				<textElement textAlignment="Center">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mobile_no5}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="225" y="221" width="148" height="20" uuid="50487bbc-5ff3-48e7-b0d2-15c97c244119"/>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Contact No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="190" width="148" height="20" uuid="1b28f2e8-8661-44fb-aa0f-a0119e6c4494"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="290" y="80" width="80" height="73" uuid="104aca90-8ee4-4616-b7e4-6bc2fa21d5ec">
+					<property name="com.jaspersoft.studio.unit.margin" value="px"/>
+				</reportElement>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" margin="1" qrVersion="2">
+					<jr:codeExpression><![CDATA[$P{entity_no5}]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
+			<image scaleImage="RetainShape" rotation="None" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement isPrintRepeatedValues="false" x="236" y="80" width="60" height="76" uuid="d56212fe-74dd-48c8-9b09-f020892ce52b"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/flutter/images/"+$P{photo5}+""]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="228" y="22" width="25" height="25" uuid="7c1acdc8-b2ae-4410-b3af-6841d0dc5b6b"/>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/plugins/jasperreport/LOGO-png.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="413" y="3" width="171" height="251" uuid="1f8f2199-e350-453b-b820-32fd374329da"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="424" y="15" width="148" height="229" uuid="6bf18d63-bd06-4290-871a-9207c17530d2"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="424" y="56" width="148" height="20" uuid="b59c6dc3-a1b2-4e9f-b76e-ff789a88195f"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{entity_no6}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="423" y="170" width="149" height="20" uuid="c027b6d4-48fc-4ef4-8230-1fe62a5b63c1"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fullname6}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="444" y="183" width="106" height="1" uuid="e1629b59-200e-4cd1-960d-afcb1d772c20"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="424" y="22" width="148" height="20" uuid="3d0aab6e-5f2d-4399-96f2-b8c1a203a79d"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="29" width="148" height="20" uuid="836652b8-6a8f-4e9d-bd9c-33a84f873584"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Province of Negros Occidental]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="37" width="148" height="20" uuid="fe96f858-3675-44a3-bff8-626b4b6d8c86"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[CITY OF SAN CARLOS]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="424" y="199" width="148" height="24" isPrintWhenDetailOverflows="true" uuid="ae5057fd-085b-46bd-9a13-49a725df0a3f"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{street6}+", "+$P{barangay6}+" "]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="424" y="230" width="148" height="16" uuid="c873eef8-c2df-43c6-80cb-f022b746a374"/>
+				<textElement textAlignment="Center">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mobile_no6}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="424" y="221" width="148" height="20" uuid="bd1d311e-bd8c-4090-99f3-8f71b59e7fb4"/>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Contact No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="190" width="148" height="20" uuid="e66fc614-71a8-42b8-92a6-1736906f68c0"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="489" y="80" width="79" height="72" uuid="37a94a9a-7e7e-4268-bfd5-67e8c36d0f2e">
+					<property name="com.jaspersoft.studio.unit.margin" value="px"/>
+				</reportElement>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" margin="1" qrVersion="2">
+					<jr:codeExpression><![CDATA[$P{entity_no6}]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
+			<image scaleImage="RetainShape" rotation="None" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement isPrintRepeatedValues="false" x="435" y="80" width="60" height="76" uuid="42caf573-287d-4ec9-8af1-5bd6ef8a7349"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/flutter/images/"+$P{photo6}+""]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="427" y="22" width="25" height="25" uuid="9c5cfd2f-3db0-46bb-9224-ecdac90147c3"/>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/plugins/jasperreport/LOGO-png.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="12" y="263" width="171" height="251" uuid="1becd545-e180-4592-8bb3-32d133219b41"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="23" y="275" width="148" height="229" uuid="aafe73bf-53b5-48b4-815b-44ec1819111d"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="23" y="316" width="148" height="20" uuid="1d7c0b67-24ad-44a9-a6fd-39863be191ac"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{entity_no7}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="22" y="430" width="149" height="20" uuid="81d9cc88-f39e-4ca2-ac8c-42db8af00635"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fullname7}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="43" y="443" width="106" height="1" uuid="066b6bbb-986d-4241-99c2-cdd2cf3b0611"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="23" y="282" width="148" height="20" uuid="261115f4-f9c3-48a8-b173-89ce558f2672"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="289" width="148" height="20" uuid="c456dc6a-3650-45da-b0d5-da4bc2dde49c"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Province of Negros Occidental]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="297" width="148" height="20" uuid="17571902-c326-4089-869f-8470381273f5"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[CITY OF SAN CARLOS]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="23" y="459" width="148" height="24" isPrintWhenDetailOverflows="true" uuid="e3dc1248-b27e-4b0f-9ce8-09becc932913"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{street7}+",  "+$P{barangay7}+" "]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="23" y="490" width="148" height="16" uuid="8128ca8f-04f2-47f0-8895-baa42f0be387"/>
+				<textElement textAlignment="Center">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mobile_no7}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="23" y="481" width="148" height="20" uuid="fe57f023-66d7-47bb-833e-a94eb7ceb110"/>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Contact No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="450" width="148" height="20" uuid="fbb2d667-cce5-4b7b-8413-926d36e730c8"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="88" y="340" width="79" height="72" uuid="5eaed3f9-ad0d-46b4-805c-b273f2eace80">
+					<property name="com.jaspersoft.studio.unit.margin" value="px"/>
+				</reportElement>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" margin="1" qrVersion="2">
+					<jr:codeExpression><![CDATA[$P{entity_no7}]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
+			<image scaleImage="RetainShape" rotation="None" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement x="34" y="340" width="60" height="76" uuid="8d95a741-bd19-479c-bd67-ddd460d34917"/>
+				<box>
+					<topPen lineWidth="3.0"/>
+					<leftPen lineWidth="3.0"/>
+					<bottomPen lineWidth="3.0"/>
+					<rightPen lineWidth="3.0"/>
+				</box>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/flutter/images/"+$P{photo7}+""]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="26" y="282" width="25" height="25" uuid="3152b79b-d9a5-49ad-b234-d1ee39dece5d"/>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/plugins/jasperreport/LOGO-png.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="213" y="263" width="171" height="251" uuid="5242e3ae-81c8-4941-9635-0bedbaf4454a"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="224" y="275" width="148" height="229" uuid="88af5755-301c-4994-881a-2399b1a50952"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="224" y="316" width="148" height="20" uuid="328928f9-b9f4-4136-9cc4-a5e085f54312"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{entity_no8}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="223" y="430" width="149" height="20" uuid="2a9a90b1-a6b6-4658-a489-a8697e07a2bd"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fullname8}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="244" y="443" width="106" height="1" uuid="4c045437-43b4-40ab-a706-af031cb6243b"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="224" y="282" width="148" height="20" uuid="eae4b621-afd4-4552-908b-e6a746a64aea"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="289" width="148" height="20" uuid="2441ac85-da18-446b-b19d-5ae7bdd4fa0c"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Province of Negros Occidental]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="297" width="148" height="20" uuid="240be2ec-b582-46db-84f8-bb55ad2909f4"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[CITY OF SAN CARLOS]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="224" y="459" width="148" height="24" isPrintWhenDetailOverflows="true" uuid="b3dc2743-c7d6-4515-86ab-46e28fb5ee34"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{street8}+", "+$P{barangay8}+" "]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="224" y="490" width="148" height="16" uuid="d5b85266-720d-4116-a65b-0c86cd1abf3e"/>
+				<textElement textAlignment="Center">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mobile_no8}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="224" y="481" width="148" height="20" uuid="37b6a711-581f-4b4a-9e2d-f9d36553ec39"/>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Contact No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="450" width="148" height="20" uuid="09590cbb-9c58-420f-b4cf-5c54f6d223cf"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="289" y="340" width="78" height="71" uuid="9612178b-e336-43f3-a184-9f4cc7fd48ea">
+					<property name="com.jaspersoft.studio.unit.margin" value="px"/>
+				</reportElement>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" margin="1" qrVersion="2">
+					<jr:codeExpression><![CDATA[$P{entity_no8}]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
+			<image scaleImage="RetainShape" rotation="None" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement isPrintRepeatedValues="false" x="235" y="340" width="60" height="76" uuid="7f52e938-9c65-437d-97bd-e9951b90a424"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/flutter/images/"+$P{photo8}+""]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="227" y="282" width="25" height="25" uuid="5b4eb1e1-6210-47e5-a48f-fb858ca52a8f"/>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/plugins/jasperreport/LOGO-png.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="412" y="263" width="171" height="251" uuid="0aab28ac-926a-4a1e-bebe-9682965a0ab0"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="423" y="275" width="148" height="229" uuid="b062fcf3-27a3-41bd-bf3d-dda0d2b0e0e5"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="423" y="316" width="148" height="20" uuid="09679a62-8732-4c1f-8d18-b2b429485adf"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{entity_no9}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="422" y="430" width="149" height="20" uuid="352dfea3-7fed-46db-a7ac-2caadd777463"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fullname9}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="443" y="443" width="106" height="1" uuid="28531625-afb1-444a-9d9e-ba5b8dcd5523"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="423" y="282" width="148" height="20" uuid="a4142d70-90a7-43fd-9f91-8cb53976568f"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="289" width="148" height="20" uuid="b9468d9c-894b-4b20-84c6-e7583a059591"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Province of Negros Occidental]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="297" width="148" height="20" uuid="cea522fd-a0e3-4942-bdb1-ee7f44577f17"/>
+				<textElement textAlignment="Center">
+					<font size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[CITY OF SAN CARLOS]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="423" y="459" width="148" height="24" isPrintWhenDetailOverflows="true" uuid="16459651-2cd6-4a52-9286-a61dbba6353f"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{street9}+", "+$P{barangay9}+" "]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="423" y="490" width="148" height="16" uuid="96be6c1f-a8a1-4290-b922-9bdab474a01a"/>
+				<textElement textAlignment="Center">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mobile_no9}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="423" y="481" width="148" height="20" uuid="fca5c257-4e9e-4bf8-94a3-997dfe125516"/>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Contact No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="450" width="148" height="20" uuid="e21e1bea-f2a9-4f29-9584-002adee9c3d1"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="488" y="340" width="77" height="70" uuid="bafbbf25-77e6-4ede-a8d2-95a032e3363a">
+					<property name="com.jaspersoft.studio.unit.margin" value="px"/>
+				</reportElement>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" margin="1" qrVersion="2">
+					<jr:codeExpression><![CDATA[$P{entity_no9}]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
+			<image scaleImage="RetainShape" rotation="None" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement isPrintRepeatedValues="false" x="434" y="340" width="60" height="76" uuid="d5470f52-fc77-4a93-9ffd-03a9ccb8dbb2"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/flutter/images/"+$P{photo9}+""]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="426" y="282" width="25" height="25" uuid="953d0c79-dc0e-4d4a-a686-b2104b2b40c7"/>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/plugins/jasperreport/LOGO-png.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band/>
+	</pageFooter>
+	<lastPageFooter>
+		<band/>
+	</lastPageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

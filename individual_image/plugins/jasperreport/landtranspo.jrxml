@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.8.0.final using JasperReports Library version 6.14.0-2ab0d8625be255bf609c78e1181801213e51db8f  -->
+<!-- 2020-10-02T14:35:11 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="juridical_id_new" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9c99dcbc-a89b-46e8-bac8-56a37e04380d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="sccdrrmo.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from tbl_landtranspo]]>
+	</queryString>
+	<field name="entity_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="entity_no"/>
+		<property name="com.jaspersoft.studio.field.label" value="entity_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_landtranspo"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date_register" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="date_register"/>
+		<property name="com.jaspersoft.studio.field.label" value="date_register"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_landtranspo"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="trans_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="trans_type"/>
+		<property name="com.jaspersoft.studio.field.label" value="trans_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_landtranspo"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vehicle_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="vehicle_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="vehicle_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_landtranspo"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vehicle_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="vehicle_no"/>
+		<property name="com.jaspersoft.studio.field.label" value="vehicle_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_landtranspo"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="plate_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="plate_no"/>
+		<property name="com.jaspersoft.studio.field.label" value="plate_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_landtranspo"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="route" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="route"/>
+		<property name="com.jaspersoft.studio.field.label" value="route"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_landtranspo"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="contact_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="contact_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="contact_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_landtranspo"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="contact_position" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="contact_position"/>
+		<property name="com.jaspersoft.studio.field.label" value="contact_position"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_landtranspo"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mobile_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="mobile_no"/>
+		<property name="com.jaspersoft.studio.field.label" value="mobile_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_landtranspo"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telephone_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="telephone_no"/>
+		<property name="com.jaspersoft.studio.field.label" value="telephone_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_landtranspo"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_landtranspo"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="photo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="photo"/>
+		<property name="com.jaspersoft.studio.field.label" value="photo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_landtranspo"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="502">
+			<rectangle>
+				<reportElement x="12" y="20" width="409" height="469" uuid="f2bfc186-efbf-481d-95c2-d198bcc878b9"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="27" y="34" width="379" height="439" uuid="8df0c1d8-59f5-4fea-b679-2bfb678b6356"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="28" y="120" width="374" height="40" uuid="aa06e238-8ef7-47c5-acc6-9751eb05a8ca"/>
+				<textElement textAlignment="Center">
+					<font size="28" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{entity_no}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="112" y="160" width="208" height="189" uuid="ccc4cda9-33be-4a77-a7b8-80e1e7b350e5">
+					<property name="com.jaspersoft.studio.unit.margin" value="px"/>
+				</reportElement>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" margin="1" qrVersion="2">
+					<jr:codeExpression><![CDATA[$F{entity_no}]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
+			<image onErrorType="Blank">
+				<reportElement x="79" y="47" width="55" height="51" uuid="b4b48f5a-8377-4bf2-9cf3-55891be8470d"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/plugins/jasperreport/LOGO-png.png"]]></imageExpression>
+			</image>
+			<image onErrorType="Blank">
+				<reportElement x="300" y="47" width="52" height="51" uuid="df0c7fa2-1430-4781-8ea8-16cace4cfb67"/>
+				<imageExpression><![CDATA["/opt/bitnami/apache2/htdocs/sccdrrmo/flutter/images/"+$F{photo}+""]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="27" y="48" width="378" height="20" uuid="bd2028a6-0f5a-490c-8f3a-9a8415445f54"/>
+				<textElement textAlignment="Center">
+					<font size="10" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="57" width="378" height="20" uuid="104f1bd6-9056-4e55-866e-41ad861dba20"/>
+				<textElement textAlignment="Center">
+					<font size="10" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Province of Negros Occidental]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="68" width="378" height="20" uuid="20a0b202-9203-42db-b059-bf9a2d12b104"/>
+				<textElement textAlignment="Center">
+					<font size="10" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[CITY OF SAN CARLOS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="27" y="417" width="378" height="31" uuid="3878c3c4-8a62-414f-9b21-0a90b7d86b02"/>
+				<textElement textAlignment="Center">
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobile_no}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="27" y="430" width="378" height="20" uuid="6569f2e6-bce0-4deb-94f5-ebd4b39f9073"/>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Contact No.]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="27" y="359" width="378" height="50" isPrintWhenDetailOverflows="true" uuid="1732c2fe-f99a-4123-8978-76bc48e71d43"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vehicle_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>
