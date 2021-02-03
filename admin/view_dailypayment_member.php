@@ -209,7 +209,7 @@ while ($result = $get_data_data->fetch(PDO::FETCH_ASSOC)) {
                                 <input type="text" style="margin-right:50px;" class="form-control col-3 " data-provide="datepicker" autocomplete="off" name="dateto1" id="ydteto" value="<?php echo $ydate_to; ?>">
 
                                 <button id="view_yearlypayment_member" onClick="loadhistory1()" class="btn btn-success"><i class="fa fa-search"></i></button>
-                                <input id="objid5" value="<?php echo $objid; ?>">
+                                <input hidden id="objid5" value="<?php echo $objid; ?>">
                               </div>
                             </div>
                           </div>
