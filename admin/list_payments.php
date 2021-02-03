@@ -143,7 +143,7 @@ $get_all_brgy_data->execute();
                                   <div class="col-md-3">
                                                     <!-- <label>Barangay: </label> -->
                                                      <select class="form-control select2" id="barangay" style="width: 100%;" name="barangay" value="<?php echo $barangay; ?>" required>
-                                                        <option selected="selected">Select Barangay</option>
+                                                        <option value = ""selected="selected">Select Barangay</option>
                                                         <?php while ($get_brgy = $get_all_brgy_data->fetch(PDO::FETCH_ASSOC)) { ?>
                                                             <option value="<?php echo $get_brgy['brgy']; ?>"><?php echo $get_brgy['brgy']; ?></option>
                                                            
@@ -469,94 +469,6 @@ $get_all_brgy_data->execute();
           }
         });
     }
-
-
-
-        // $('#barangay1').on('change', function() {
-        //     var barangay = this.value;
-        //     console.log(barangay);
-        //     $.ajax({
-        //         type: "POST",
-        //         url: 'sql_query_get_barangay.php',
-        //         data: {
-        //             barangay: barangay
-        //         },
-        //         error: function(xhr, b, c) {
-        //             console.log(
-        //                 "xhr=" +
-        //                 xhr.responseText +
-        //                 " b=" +
-        //                 b.responseText +
-        //                 " c=" +
-        //                 c.responseText
-        //             );
-        //         },
-        //         success: function(response) {
-        //             var result = jQuery.parseJSON(response);
-        //             console.log('response from server', result);
-        //             $('#barangay').val(result.data);
-               
-
-
-        //         },
-
-        //     });
-
-        // });
-
-
-//         $(function() {
-
-// //Initialize Select2 Elements
-// $('.select2').select2();
-// $("#barangay1").select2({
-//     //  minimumInputLength: 3,
-//     // placeholder: "hello",
-//     ajax: {
-//         url: "individual_query", // json datasource
-//         type: "post",
-//         dataType: 'json',
-//         delay: 250,
-//         data: function(params) {
-//             return {
-//                 searchTerm: params.term
-//             };
-//         },
-
-//         processResults: function(response) {
-//             return {
-//                 results: response
-
-
-//             };
-//         },
-//         cache: true,
-//         error: function(xhr, b, c) {
-//             console.log(
-//                 "xhr=" +
-//                 xhr.responseText +
-//                 " b=" +
-//                 b.responseText +
-//                 " c=" +
-//                 c.responseText
-//             );
-//         }
-//     }
-// });
-
-// });
-
-
-    // $('#users tbody').on('click', 'button.printlink', function() {
-    //   // alert ('hello');
-    //   // var row = $(this).closest('tr');
-    //   var table = $('#users').DataTable();
-    //   var data = table.row($(this).parents('tr')).data();
-    //   //  alert (data[0]);
-    //   //  var data = $('#users').DataTable().row('.selected').data(); //table.row(row).data().docno;
-    //   var entity_no = data[0];
-    //   window.open("individual_history.php?entity_no=" + entity_no + '_parent');
-    // });
 
 
 
