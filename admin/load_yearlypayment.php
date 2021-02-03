@@ -16,7 +16,7 @@ if (isset($_POST['objid5'])) {
     while ($list_history = $get_all_history_data->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr>";
         echo "<td>";
-        echo $list_history['objidyear'];
+        echo $list_history['objid'];
         echo "</td>";
         echo "<td>";
         echo $list_history['dateyeardue'];
@@ -28,13 +28,11 @@ if (isset($_POST['objid5'])) {
         echo $list_history['amountyeardue'];
         echo "</td>";
         echo "<td>";
-        '<button class="btn btn-danger delete btn-sm" data-placement="top" title="Delete Record"><i class="fa fa-trash-o"></i></button>';
+        echo "<button class='btn btn-danger delete btn-sm' data-placement='top' id='delete' title='Delete Record'><i class='fa fa-trash-o'></i></button>";
+        
         echo "</td>";
         echo "</tr>";
 
     }
  
 }
-
-
-?>
