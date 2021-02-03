@@ -1,4 +1,6 @@
 <?php
+
+include('../config/db_config.php');
 if (isset($_POST['deletepayment'])) {
 
     $deleteobjidmas = $_POST['objid7'];
