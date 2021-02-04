@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.14.0.final using JasperReports Library version 6.14.0-2ab0d8625be255bf609c78e1181801213e51db8f  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="individual_history" pageWidth="612" pageHeight="936" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="40356b74-0056-4ddc-b11f-94d412740015">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="475"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="fscap2"/>
+	<parameter name="masname1" class="java.lang.String"/>
+	<parameter name="objid" class="java.lang.String"/>
+	<parameter name="datefrom" class="java.lang.String"/>
+	<parameter name="dateto" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from masdailypayment]]>
+	</queryString>
+	<field name="objidmas" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="objidmas"/>
+		<property name="com.jaspersoft.studio.field.label" value="objidmas"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="masdailypayment"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="masdailypayment"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="datepayment" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="datepayment"/>
+		<property name="com.jaspersoft.studio.field.label" value="datepayment"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="masdailypayment"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ornomas" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ornomas"/>
+		<property name="com.jaspersoft.studio.field.label" value="ornomas"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="masdailypayment"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="amountmas" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="amountmas"/>
+		<property name="com.jaspersoft.studio.field.label" value="amountmas"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="masdailypayment"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reqamount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="reqamount"/>
+		<property name="com.jaspersoft.studio.field.label" value="reqamount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="masdailypayment"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="advance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="advance"/>
+		<property name="com.jaspersoft.studio.field.label" value="advance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="masdailypayment"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="balance"/>
+		<property name="com.jaspersoft.studio.field.label" value="balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="masdailypayment"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status"/>
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="masdailypayment"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="datedeleted" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="datedeleted"/>
+		<property name="com.jaspersoft.studio.field.label" value="datedeleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="masdailypayment"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="masname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="masname"/>
+		<property name="com.jaspersoft.studio.field.label" value="masname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="masdailypayment"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="user" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="user"/>
+		<property name="com.jaspersoft.studio.field.label" value="user"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="masdailypayment"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="delete_user" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="delete_user"/>
+		<property name="com.jaspersoft.studio.field.label" value="delete_user"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="masdailypayment"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="161" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="76" width="593" height="30" uuid="fe7599d0-703f-4124-800f-38fed004653b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DAILY PAYMENT REPORT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="110" width="59" height="20" uuid="ff4496ac-d700-4e9a-b9b9-1ab6016d521a"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date From:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="111" width="55" height="20" uuid="3e29d949-3fb0-4bef-a4e2-df75728cd3b1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID       :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="130" width="44" height="20" uuid="226c9de5-df3d-4112-a96c-e53b07be6d8c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="82" y="131" width="185" height="30" uuid="7042926e-7a80-489d-92ef-94cd26cc633b"/>
+				<textFieldExpression><![CDATA[$P{masname1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-1" x="9" y="13" width="592" height="16" uuid="74a740f2-5997-4c44-a5e9-2ed748787b0f"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isUnderline="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[San Carlos City Federation of Senior Citizens Association of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-2" x="9" y="29" width="592" height="16" uuid="e667b701-4764-4330-a2ab-cf706360c521"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isUnderline="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[(SCCFSCAP) SAN CARLOS CITY NEGROS OCCIDENTAL, INDIVIDUAL LEDGER OF MAS DEATH PAYMENT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="82" y="112" width="345" height="25" uuid="a4e909ab-b2f7-4535-af7f-efbd0d03b5dc"/>
+				<textFieldExpression><![CDATA[$P{objid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="420" y="130" width="59" height="20" uuid="b0c4d9aa-f604-4df3-8d28-bb9b546de55a"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date To:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="480" y="111" width="100" height="19" uuid="2a320649-9a4f-496d-af99-1741961ca99a"/>
+				<textFieldExpression><![CDATA[$P{datefrom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="131" width="100" height="19" uuid="56b9f02c-24d1-44ce-a500-8c44d3e82908"/>
+				<textFieldExpression><![CDATA[$P{dateto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" x="49" y="0" width="141" height="20" uuid="7a1bb7f4-de30-4925-925d-ee12f7d37951"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="190" y="0" width="230" height="20" uuid="8e3f171a-3adb-4a2e-ba94-56be66382266"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ORNO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="420" y="0" width="150" height="20" uuid="a19f29e8-09ae-480b-9448-8afd2ca5bf23"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[AMOUNT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="49" y="0" width="141" height="22" uuid="4c115651-1c60-46de-a0d5-4a5f49bfa987">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9662ce9-271e-471e-8309-5e38ab72ead1"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datepayment}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" pattern="h.mm a" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="190" y="0" width="230" height="22" uuid="a4f8ed0b-19a4-4801-a9ce-64076258e2a3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9662ce9-271e-471e-8309-5e38ab72ead1"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ornomas}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="420" y="0" width="150" height="22" uuid="f7137a24-9675-46db-abec-54e0c38bb6f5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9662ce9-271e-471e-8309-5e38ab72ead1"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amountmas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
