@@ -14,8 +14,9 @@ if (isset($_POST['objid'])) {
 
 
     while ($list_history = $get_all_history_data->fetch(PDO::FETCH_ASSOC)) {
-        echo "<tr>";
-        echo "<td>";
+        
+        echo "<tr > ";
+        echo "<td >";
         echo $list_history['objidmas'];
         echo "</td>";
         echo "<td>";

@@ -149,7 +149,7 @@ while ($result = $get_data_data->fetch(PDO::FETCH_ASSOC)) {
 
 
                           <table style="overflow-x: auto;" id="users" name="user" class="table table-bordered table-striped">
-                            <thead alignment="center">
+                            <thead align="center">
 
 
 
