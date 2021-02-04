@@ -159,7 +159,7 @@ $get_all_brgy_data->execute();
                                   <button id="list_payments" onClick="loadhistory()" class="btn btn-success"><i class="fa fa-search"></i></button>
                                   <!-- <input hidden id="person_entity" value="<?php echo $ornomas; ?>"> -->
                                   <label style="padding-right:10px;padding-left: 10px"> </label>
-                                  <a    class="btn btn-danger btn-md" style="float:right;" target="blank" id="printlink" class="btn btn-success bg-gradient-success" href="../plugins/jasperreport/individual_history.php?entity_no=<?php echo $entity_no; ?>&datefrom=<?php echo $date_from; ?>&dateto=<?php echo $date_to; ?>">
+                                  <a    class="btn btn-danger btn-md" style="float:right;" target="blank" id="printlink" class="btn btn-success bg-gradient-success" href="../plugins/jasperreport/payments.php?objid=<?php echo $objid; ?>&datefrom=<?php echo $date_from; ?>&dateto=<?php echo $date_to; ?>">
 
 <i class="nav-icon fa fa-print"></i></a>
                                                 </div>
@@ -473,15 +473,13 @@ $get_all_brgy_data->execute();
 
 
     $('#printlink').click(function() {
-      var entity_no = $('#person_entity').val();
+      var ornomas = $('#ornomas').val();
       var date_from = $('#dtefrom').val();
       var date_to = $('#dteto').val();
-      var fullname = $('#fullname').val();
-      var street = $('#street').val();
-      var mobile_no = $('#mobile_no').val();
-      console.log(entity_no);
-      var param = "entity_no=" + entity_no + "&fullname=" + fullname + "&street=" + street + "&mobile_no=" + mobile_no + "&datefrom=" + date_from + "&dateto=" + date_to + "";
-      $('#printlink').attr("href", "../plugins/jasperreport/individual_history.php?" + param, '_parent');
+ 
+      console.log(ornomas);
+      var param = "ornomas=" + ornomas + "&datefrom=" + date_from + "&dateto=" + date_to + "";
+      $('#printlink').attr("href", "../plugins/jasperreport/payments.php?" + param, '_parent');
     })
   </script>
 </body>
