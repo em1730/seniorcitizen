@@ -36,6 +36,10 @@ if (isset($ornomas)) {
         echo "<td>";
         echo $list_history['amountmas'];
         echo "</td>";
+
+        echo "<td>";
+        echo $list_history['barangay'];
+        echo "</td>";
   
      
         echo "</tr>";
@@ -72,6 +76,10 @@ if($barangay=='' && $ornomas != ''){
         echo "</td>";
         echo "<td>";
         echo $list_barangay['amountmas'];
+        echo "</td>";
+
+        echo "<td>";
+        echo $list_barangay['barangay'];
         echo "</td>";
   
      

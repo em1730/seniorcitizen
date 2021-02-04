@@ -183,6 +183,7 @@ $get_all_brgy_data->execute();
                                   <th> DATE</th>
                                   <th> OR#</th>
                                   <th> AMOUNT </th>
+                                  <th> BRGY. </th>
                                   <th> Options </th>
                   
 

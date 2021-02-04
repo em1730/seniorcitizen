@@ -6,7 +6,7 @@ if (isset($_POST['objid5'])) {
     $ydate_to =    date('Y-m-d', strtotime($_POST['ydate_to']));
 
 
-    $get_all_yearly_sql = "SELECT  * from yearduepayment t inner join registration r on r.objid = t.id where  t.id = '" . $objid5 . "' AND t.dateyeardue between '".$ydate_from."' and '".$ydate_to."'";
+    $get_all_yearly_sql = "SELECT  * from yearduepayment t inner join registration r on r.objid = t.id where  t.id = '" . $objid5 . "' AND t.dateyeardue between '".$ydate_from."' and '".$ydate_to."' and yearduestatus = 'ACTIVE'";
 
 
     $get_all_yearly_data = $con->prepare($get_all_yearly_sql);
