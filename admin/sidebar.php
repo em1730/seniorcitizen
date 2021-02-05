@@ -174,7 +174,7 @@ $photo = '';
       &nbsp; &nbsp; &nbsp; &nbsp;
       <!-- <img src="../dist/img/final_logo_white.png" width="150px" height="80px"> -->
       <label style="color:white" class="d-block">
-      <label> SENIOR CITIZEN </label>
+      <label style="color:white"> SENIOR CITIZEN </label>
 
       
         &nbsp; &nbsp; &nbsp; &nbsp;
