@@ -3,6 +3,7 @@ include('../config/db_config.php');
 
 $ornomas =   $_POST['ornomas'];
 $barangay =   $_POST['barangay'];
+
 $date_from =  date('Y-m-d', strtotime($_POST['date_from']));
 $date_to =    date('Y-m-d', strtotime($_POST['date_to']));
 
@@ -40,13 +41,17 @@ if (isset($ornomas)) {
         echo "<td>";
         echo $list_history['barangay'];
         echo "</td>";
-  
+        echo "<td>";
+        echo "<button class='btn btn-danger delete btn-sm' data-placement='top' id='delete' title='Delete Record'><i class='fa fa-trash-o'></i></button>";
+        
+        echo "</td>";
      
         echo "</tr>";
 
     }
  
 }
+
 
 if($barangay=='' && $ornomas != ''){
     
@@ -81,13 +86,17 @@ if($barangay=='' && $ornomas != ''){
         echo "<td>";
         echo $list_barangay['barangay'];
         echo "</td>";
-  
+        echo "<td>";
+        echo "<button class='btn btn-danger delete btn-sm' data-placement='top' id='delete' title='Delete Record'><i class='fa fa-trash-o'></i></button>";
+        
+        echo "</td>";
      
         echo "</tr>";
 
     }
 
 }
+
 
 
 

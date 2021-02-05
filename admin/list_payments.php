@@ -3,6 +3,9 @@
 include('../config/db_config.php');
 include('sql_queries.php');
 
+include('delete_payment.php');
+
+
 // include('list_individual.php');
 
 
@@ -25,7 +28,7 @@ $time = date('H:i:s');
 $now = new DateTime();
 
 $objid = $objid1 = $masname = $person_status =  $entity_no  =  $address  =
-  $contact_number  = $fullname = $date_from = $date_to = $ornomas = $mobile_no = $ydate_from = $ydate_to = $barangay = '';
+  $contact_number  = $fullname = $date_from = $date_to = $ornomas = $mobile_no = $ydate_from = $ydate_to = $barangay = $ornomas1 = '';
 
 //fetch user from database
 $get_user_sql = "SELECT * FROM tbl_users where id = :id ";
@@ -59,6 +62,7 @@ $get_all_brgy_data->execute();
 
 
 </head>
+
 <body class="hold-transition sidebar-mini">
   <div class="wrapper">
 
@@ -66,226 +70,319 @@ $get_all_brgy_data->execute();
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-         
 
-            <!-- <div class="float-topright">
+
+      <!-- <div class="float-topright">
                 <?php echo $alert_msg; ?>
             </div> -->
 
-            <section class="content">
-           
-<br>
-                    <div class="card-header p-2 bg-success text-white">
+      <section class="content">
 
-                        <div class="nav nav-pills" id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-tracer" role="tab" aria-controls="nav-home" aria-selected="true">DAILY PAYMENT REPORTS</a>
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">YEARLY PAYMENT REPORTS</a>
-                   
+        <br>
+        <div class="card-header p-2 bg-success text-white">
+
+          <div class="nav nav-pills" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-daily" role="tab" aria-controls="nav-home" aria-selected="true">DAILY PAYMENT REPORTS</a>
+            <a class="nav-item nav-link" id="nav-yearly-tab" data-toggle="tab" href="#nav-yearly" role="tab" aria-controls="nav-yearly" aria-selected="false">YEARLY PAYMENT REPORTS </a>
+
+
+          </div>
+        </div>
+
+
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-tracer" role="tabpanel" aria-labelledby="nav-home-tab">
+
+            <div class="card-body">
+              <div class="box box-primary">
+                <form role="form" method="POST" action="<?php htmlspecialchars("PHP_SELF"); ?>">
+                  <div class="box-body">
+                    <div class="row">
+                      <div class="col-12" style="margin-bottom:30px;padding:auto;">
+
+
+                        <div class="input-group date">
+                          <label style="padding-right:10px;padding-left: 10px">From: </label>
+                          <div style="padding-right:10px" class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                          </div>
+                          <input style="margin-right:10px;" type="text" data-provide="datepicker" class="form-control col-3 " style="font-size:13px" autocomplete="off" name="datefrom" id="dtefrom" value="<?php echo $date_from; ?>">
+
+                          <label style="padding-right:10px">To:</label>
+                          <div style="padding-right:10px" class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                          </div>
+                          <input type="text" style="margin-right:50px;" class="form-control col-3 " data-provide="datepicker" autocomplete="off" name="dateto" id="dteto" value="<?php echo $date_to; ?>">
+
 
                         </div>
-                    </div>
+
+                        <div class="input-group date">
+
+
+                          <label style="padding-right:10px;padding-left: 10px">OR No: </label>
+                          <div style="padding-right:12px" class="input-group-addon">
+
+                          </div>
+                          <div class="col-md-3">
+                            <input type="text" class="form-control" id="ornomas" name="ornomas" placeholder="OR NO." value="<?php echo $ornomas; ?>" required>
+                          </div>
+                        </div>
+
+
+                        <div class="input-group date">
+                          <label style="padding-right:30px;padding-left: 10px">BRGY: </label>
+
+
+                          <div class="col-md-3">
+                            <!-- <label>Barangay: </label> -->
+                            <select class="form-control select2" id="barangay" style="width: 100%;" name="barangay" value="<?php echo $barangay; ?>" required>
+                              <option value="" selected="selected">Select Barangay</option>
+                              <?php while ($get_brgy = $get_all_brgy_data->fetch(PDO::FETCH_ASSOC)) { ?>
+                                <option value="<?php echo $get_brgy['brgy']; ?>"><?php echo $get_brgy['brgy']; ?></option>
+
+                              <?php } ?>
+
+                            </select>
+
+
+                          </div>
+
+
+                          <button id="list_payments" onClick="loadhistory()" class="btn btn-success"><i class="fa fa-search"></i></button>
+                          <!-- <input  id="person_ornomas" value="<?php echo $ornomas; ?>"> -->
+                          <label style="padding-right:10px;padding-left: 10px"> </label>
+                          <a class="btn btn-danger btn-md" style="float:right;" target="blank" id="printlink" class="btn btn-success bg-gradient-success" href="../plugins/jasperreport/payments.php?ornomas=<?php echo $ornomas; ?>&datefrom=<?php echo $date_from; ?>&dateto=<?php echo $date_to; ?>">
+
+                            <i class="nav-icon fa fa-print"></i></a>
+                        </div>
+
+                        <div class="input-group date">
+
+
+                          <label style="padding-right:10px;padding-left: 5px">COUNT: </label>
+                          <div style="padding-right:12px" class="input-group-addon">
+
+                          </div>
+                          <div class="col-md-1">
+                            <input type="text" readonly class="form-control" id="count" name="count" placeholder="count">
+                          </div>
+
+                          <label style="padding-right:10px;padding-left: 5px">TOTAL: </label>
+                          <div style="padding-right:5px" class="input-group-addon">
+
+                          </div>
+                          <div class="col-md-1">
+                            <input type="text" readonly class="form-control" id="amount" name="amount" placeholder="Amount">
+                          </div>
+                        </div>
 
 
 
-         
-              
-
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active" id="nav-tracer" role="tabpanel" aria-labelledby="nav-home-tab">
-    
-             
-              
+                        <div class="table-responsive">
 
 
 
-
-                    <div class="card-body">
-                      <div class="box box-primary">
-                        <form role="form" method="POST" action="<?php htmlspecialchars("PHP_SELF"); ?>">
-                          <div class="box-body">
-                            <div class="row">
-                              <div class="col-12" style="margin-bottom:30px;padding:auto;">
-
-                              
-                                <div class="input-group date">
-                                  <label style="padding-right:10px;padding-left: 10px">From: </label>
-                                  <div style="padding-right:10px" class="input-group-addon">
-                                    <i class="fa fa-calendar"></i>
-                                  </div>
-                                  <input style="margin-right:10px;" type="text" data-provide="datepicker" class="form-control col-3 " style="font-size:13px" autocomplete="off" name="datefrom" id="dtefrom" value="<?php echo $date_from; ?>">
-
-                                  <label style="padding-right:10px">To:</label>
-                                  <div style="padding-right:10px" class="input-group-addon">
-                                    <i class="fa fa-calendar"></i>
-                                  </div>
-                                  <input type="text" style="margin-right:50px;" class="form-control col-3 " data-provide="datepicker" autocomplete="off" name="dateto" id="dteto" value="<?php echo $date_to; ?>">
-
-                               
-                                </div>
-                            
-                                <div class="input-group date">
-                             
-                                
-                                  <label style="padding-right:10px;padding-left: 10px">OR No: </label>
-                                  <div style="padding-right:12px" class="input-group-addon">
-                             
-                                  </div>
-                                  <div class="col-md-3">
-                                  <input type="text" class="form-control" id = "person_ornomas" name="ornomas" placeholder="OR NO." value="<?php echo $ornomas; ?>" required>
-                                  </div>
-                                  </div>
-                             
-                             
-                                  <div class="input-group date">
-                             <label style="padding-right:30px;padding-left: 10px">BRGY: </label>
-                  
-                           
-                                  <div class="col-md-3">
-                                                    <!-- <label>Barangay: </label> -->
-                                                     <select class="form-control select2" id="barangay" style="width: 100%;" name="barangay" value="<?php echo $barangay; ?>" required>
-                                                        <option value = ""selected="selected">Select Barangay</option>
-                                                        <?php while ($get_brgy = $get_all_brgy_data->fetch(PDO::FETCH_ASSOC)) { ?>
-                                                            <option value="<?php echo $get_brgy['brgy']; ?>"><?php echo $get_brgy['brgy']; ?></option>
-                                                           
-                                                        <?php } ?>
-                                                        
-                                                    </select> 
-                                                    
-
-
-                                                    
-                          
-                                  </div>
-                                  <button id="list_payments" onClick="loadhistory()" class="btn btn-success"><i class="fa fa-search"></i></button>
-                                  <!-- <input hidden id="person_entity" value="<?php echo $ornomas; ?>"> -->
-                                  <label style="padding-right:10px;padding-left: 10px"> </label>
-                                  <a    class="btn btn-danger btn-md" style="float:right;" target="blank" id="printlink" class="btn btn-success bg-gradient-success" href="../plugins/jasperreport/payments.php?objid=<?php echo $objid; ?>&datefrom=<?php echo $date_from; ?>&dateto=<?php echo $date_to; ?>">
-
-<i class="nav-icon fa fa-print"></i></a>
-                                                </div>
-                                                </div>
-                                                </div>
-
-                             
-
-                            
-                            <div class="table-responsive">
-                  
-
-
-                              <table style="overflow-x: auto;" id="users" name="user" class="table table-bordered table-striped">
-                                <thead align="center">
+                          <table style="overflow-x: auto;" id="users" name="user" class="table table-bordered table-striped">
+                            <thead align="center">
 
 
 
-                                  <th> OBJID </th>
-                                  <th> NAME</th>
-                                  <th> DATE</th>
-                                  <th> OR#</th>
-                                  <th> AMOUNT </th>
-                                  <th> BRGY. </th>
-                                  <th> Options </th>
-                  
-
-                                </thead>
-                                <tbody id="daily_payment">
-
-                                </tbody>
-                              </table>
+                              <th> OBJID </th>
+                              <th> NAME</th>
+                              <th> DATE</th>
+                              <th> OR#</th>
+                              <th> AMOUNT </th>
+                              <th> BRGY. </th>
+                              <th> Options </th>
 
 
-                            </div>
-                        </form>
+                            </thead>
+                            <tbody id="daily_payment">
+
+                            </tbody>
+                          </table>
+
+
+                        </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+        <!-- YEARLY PAYMENT -->
+
+        <div class="tab-pane fade " id="nav-yearly" role="tabpanel" aria-labelledby="nav-yearly-tab">
+
+
+          <div class="card-body">
+            <div class="box box-primary">
+              <form role="form" method="POST" action="<?php htmlspecialchars("PHP_SELF"); ?>">
+                <div class="box-body">
+                  <div class="row">
+                    <div class="col-12" style="margin-bottom:30px;padding:auto;">
+
+
+                      <div class="input-group date">
+                        <label style="padding-right:10px;padding-left: 10px">From: </label>
+                        <div style="padding-right:10px" class="input-group-addon">
+                          <i class="fa fa-calendar"></i>
+                        </div>
+                        <input style="margin-right:10px;" type="text" data-provide="datepicker" class="form-control col-3 " style="font-size:13px" autocomplete="off" name="datefrom" id="dtefrom" value="<?php echo $date_from; ?>">
+
+                        <label style="padding-right:10px">To:</label>
+                        <div style="padding-right:10px" class="input-group-addon">
+                          <i class="fa fa-calendar"></i>
+                        </div>
+                        <input type="text" style="margin-right:50px;" class="form-control col-3 " data-provide="datepicker" autocomplete="off" name="dateto" id="dteto" value="<?php echo $date_to; ?>">
+
+
                       </div>
-                    </div>
-           
-                  </div>
-                  </div>
-               
+
+                      <div class="input-group date">
 
 
-                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                 <div class="card-header  text-white bg-success">
-                      <h4> YEARLY PAYMENT
+                        <label style="padding-right:10px;padding-left: 10px">OR No: </label>
+                        <div style="padding-right:12px" class="input-group-addon">
 
-                        <a class="btn btn-danger btn-md" style="float:right;" target="blank" id="printlink" class="btn btn-success bg-gradient-success" href="../plugins/jasperreport/individual_history.php?entity_no=<?php echo $entity_no; ?>&datefrom=<?php echo $date_from; ?>&dateto=<?php echo $date_to; ?>">
+                        </div>
+                        <div class="col-md-3">
+                          <input type="text" class="form-control" id="ornomas" name="ornomas" placeholder="OR NO." value="<?php echo $ornomas; ?>" required>
+                        </div>
+                      </div>
+
+
+                      <div class="input-group date">
+                        <label style="padding-right:30px;padding-left: 10px">BRGY: </label>
+
+
+                        <div class="col-md-3">
+                          <!-- <label>Barangay: </label> -->
+                          <select class="form-control select2" id="barangay" style="width: 100%;" name="barangay" value="<?php echo $barangay; ?>" required>
+                            <option value="" selected="selected">Select Barangay</option>
+                            <?php while ($get_brgy = $get_all_brgy_data->fetch(PDO::FETCH_ASSOC)) { ?>
+                              <option value="<?php echo $get_brgy['brgy']; ?>"><?php echo $get_brgy['brgy']; ?></option>
+
+                            <?php } ?>
+
+                          </select>
+
+
+                        </div>
+
+
+                        <button id="list_payments" onClick="loadhistory()" class="btn btn-success"><i class="fa fa-search"></i></button>
+                        <!-- <input  id="person_ornomas" value="<?php echo $ornomas; ?>"> -->
+                        <label style="padding-right:10px;padding-left: 10px"> </label>
+                        <a class="btn btn-danger btn-md" style="float:right;" target="blank" id="printlink" class="btn btn-success bg-gradient-success" href="../plugins/jasperreport/payments.php?ornomas=<?php echo $ornomas; ?>&datefrom=<?php echo $date_from; ?>&dateto=<?php echo $date_to; ?>">
 
                           <i class="nav-icon fa fa-print"></i></a>
-
-
-                      </h4>
- 
-                    </div> 
-              
-
-
-
-
-                    <div class="card-body">
-                      <div class="box box-primary">
-                        <form role="form" method="POST" action="<?php htmlspecialchars("PHP_SELF"); ?>">
-                          <div class="box-body">
-                            <div class="row">
-                              <div class="col-12" style="margin-bottom:30px;padding:auto;">
-                                <div class="input-group date">
-                                  <label style="padding-right:10px;padding-left: 10px">From: </label>
-                                  <div style="padding-right:10px" class="input-group-addon">
-                                    <i class="fa fa-calendar"></i>
-                                  </div>
-                                  <input style="margin-right:10px;" type="text" data-provide="datepicker" class="form-control col-3 " style="font-size:13px" autocomplete="off" name="ydatefrom" id="ydtefrom" value="<?php echo $ydate_from; ?>">
-
-                                  <label style="padding-right:10px">To:</label>
-                                  <div style="padding-right:10px" class="input-group-addon">
-                                    <i class="fa fa-calendar"></i>
-                                  </div>
-                                  <input type="text" style="margin-right:50px;" class="form-control col-3 " data-provide="datepicker" autocomplete="off" name="ydateto" id="ydteto" value="<?php echo $ydate_to; ?>">
-
-                                  <button id="view_dailypayment_member" onClick="loadhistory1()" class="btn btn-success"><i class="fa fa-search"></i></button>
-                                  <input hidden id="person_entity1" value="<?php echo $objid; ?>"> 
-                                </div>
-                              </div>
-                            </div>
-                            <div class="table-responsive">
-                  
-
-
-                              <table style="overflow-x: auto;" id="users" name="user" class="table table-bordered table-striped">
-                                <thead align="center">
-
-
-
-                                  <th> OBJID </th>
-                                  <th> DATE PAYMENT</th>
-                                  <th> OR#</th>
-                                  <th> AMOUNT </th>
-
-                                </thead>
-                                <tbody id="yearly_payment">
-
-                                </tbody>
-                              </table>
-
-
-                            </div>
-                        </form>
                       </div>
-                    </div>
-                                </div>
 
-                              
+                      <div class="input-group date">
 
-                     
-                   
-                
-                    <br>
-            </section>
-     
-            <br>
+
+                        <label style="padding-right:10px;padding-left: 5px">COUNT: </label>
+                        <div style="padding-right:12px" class="input-group-addon">
+
+                        </div>
+                        <div class="col-md-1">
+                          <input type="text" readonly class="form-control" id="count" name="count" placeholder="count">
+                        </div>
+
+                        <label style="padding-right:10px;padding-left: 5px">TOTAL: </label>
+                        <div style="padding-right:5px" class="input-group-addon">
+
+                        </div>
+                        <div class="col-md-1">
+                          <input type="text" readonly class="form-control" id="amount" name="amount" placeholder="Amount">
+                        </div>
+                      </div>
+
+
+
+                      <div class="table-responsive">
+
+
+
+                        <table style="overflow-x: auto;" id="users" name="user" class="table table-bordered table-striped">
+                          <thead align="center">
+
+
+
+                            <th> OBJID </th>
+                            <th> NAME</th>
+                            <th> DATE</th>
+                            <th> OR#</th>
+                            <th> AMOUNT </th>
+                            <th> BRGY. </th>
+                            <th> Options </th>
+
+
+                          </thead>
+                          <tbody id="daily_payment">
+
+                          </tbody>
+                        </table>
+
+
+                      </div>
+              </form>
+            </div>
+          </div>
+
         </div>
-  <!-- /.content-wrapper -->
-  <?php include('footer.php') ?>
+
+
+
+
+        <br>
+      </section>
+
+      <br>
+    </div>
+    <!-- /.content-wrapper -->
+    <?php include('footer.php') ?>
 
   </div>
+
+
+  <div class="modal fade" id="delete_member" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Confirm Delete</h4>
+        </div>
+        <form method="POST" action="">
+          <div class="modal-body">
+            <div class="box-body">
+              <div class="form-group">
+                <label>Delete Record?</label>
+                <input readonly="true" type="text" name="fullname2" id="fullname2" class="form-control">
+                <input readonly="true" type="text" name="objid5" id="objid5" class="form-control">
+              </div>
+
+
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default pull-left bg-olive" data-dismiss="modal">No</button>
+            <input type="submit" name="delete_payment" class="btn btn-danger" value="Yes">
+          </div>
+        </form>
+
+
+      </div>
+    </div> <!-- /.modal-content -->
+  </div> <!-- /.modal-dialog -->
+
+
 
   <div class="modal fade" id="delete_PUMl" role="dialog" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-sm">
@@ -346,7 +443,7 @@ $get_all_brgy_data->execute();
   <script src="../plugins/select2/select2.full.min.js"></script>
 
   <script>
-      $('#users').DataTable({
+    $('#users').DataTable({
       'paging': true,
       'lengthChange': true,
       'searching': true,
@@ -417,48 +514,55 @@ $get_all_brgy_data->execute();
       });
     });
 
-    // $(document).on('click', 'button[data-role=confirm_delete]', function(event) {
-    //   event.preventDefault();
 
-    //   var user_id = ($(this).data('id'));
-
-    //   $('#user_id').val(user_id);
-    //   $('#delete_PUMl').modal('toggle');
-
-    // });
 
     function loadhistory() {
       event.preventDefault();
-      var ornomas = $('#person_ornomas').val();
+      var ornomas = $('#ornomas').val();
       var date_from = $('#dtefrom').val();
       var date_to = $('#dteto').val();
       var barangay = $('#barangay').val();
+      var amount = $('#amount').val();
+
+
 
       $('#daily_payment').load("load_dailypaymentreport.php", {
           ornomas: ornomas,
           date_from: date_from,
           date_to: date_to,
-          barangay: barangay
+          barangay: barangay,
+          amount: amount
+
+
+
+
         },
+
+
         function(response, status, xhr) {
           if (status == "error") {
             alert(msg + xhr.status + " " + xhr.statusText);
             console.log(msg + xhr.status + " " + xhr.statusText);
             console.log("xhr=" + xhr.responseText);
           }
+
+
         });
+
     }
+
 
 
     function loadhistory1() {
       console.log("test");
       event.preventDefault();
-      var objid1 = $('#person_entity1').val();// dri ka mo kuha  so ok nani nard salamat kayo galibog pako ani
+      var objid1 = $('#person_entity').val(); // dri ka mo kuha  so ok nani nard salamat kayo galibog pako ani
       var ydate_from = $('#ydtefrom').val();
       var ydate_to = $('#ydteto').val();
 
+
       $('#yearly_payment').load("load_yearlypayment.php", {
-          objid1: objid1,//objid 1 man imong gi gmit dri kuan nard abi nako diri sa itaas kwaon
+          objid1: objid1, //objid 1 man imong gi gmit dri kuan nard abi nako diri sa itaas kwaon
           ydate_from: ydate_from,
           ydate_to: ydate_to
         },
@@ -473,11 +577,27 @@ $get_all_brgy_data->execute();
 
 
 
+    $(function() {
+      $(document).on('click', '.delete', function(e) {
+        e.preventDefault();
+
+        var currow = $(this).closest("tr");
+        var objid5 = currow.find("td:eq(0)").text();
+        var fullname2 = currow.find("td:eq(1)").text();
+        $('#delete_member').modal('show');
+        $('#objid5').val(objid5);
+        $('#fullname2').val(fullname2);
+      });
+    });
+
+
+
+
     $('#printlink').click(function() {
       var ornomas = $('#ornomas').val();
       var date_from = $('#dtefrom').val();
       var date_to = $('#dteto').val();
- 
+
       console.log(ornomas);
       var param = "ornomas=" + ornomas + "&datefrom=" + date_from + "&dateto=" + date_to + "";
       $('#printlink').attr("href", "../plugins/jasperreport/payments.php?" + param, '_parent');
