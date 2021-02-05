@@ -83,270 +83,274 @@ $get_all_brgy_data->execute();
 
           <div class="nav nav-pills" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-daily" role="tab" aria-controls="nav-home" aria-selected="true">DAILY PAYMENT REPORTS</a>
-            <a class="nav-item nav-link" id="nav-yearly-tab" data-toggle="tab" href="#nav-yearly" role="tab" aria-controls="nav-yearly" aria-selected="false">YEARLY PAYMENT REPORTS </a>
+            <a class="nav-item nav-link" id="nav-yearly-tab" data-toggle="tab" href="#nav-yearly" role="tab" aria-controls="nav-yearly" aria-selected="true">YEARLY PAYMENT REPORTS </a>
 
 
           </div>
         </div>
 
-
+<!-- DAILY PAYMENT -->
         <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="nav-tracer" role="tabpanel" aria-labelledby="nav-home-tab">
+          <div class="tab-pane fade show active" id="nav-daily" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="card">
 
-            <div class="card-body">
-              <div class="box box-primary">
-                <form role="form" method="POST" action="<?php htmlspecialchars("PHP_SELF"); ?>">
-                  <div class="box-body">
-                    <div class="row">
-                      <div class="col-12" style="margin-bottom:30px;padding:auto;">
+              <div class="card-body">
+                <div class="box box-primary">
+                  <form role="form" method="POST" action="<?php htmlspecialchars("PHP_SELF"); ?>">
+                    <div class="box-body">
+                      <div class="row">
+                        <div class="col-12" style="margin-bottom:30px;padding:auto;">
 
 
-                        <div class="input-group date">
-                          <label style="padding-right:10px;padding-left: 10px">From: </label>
-                          <div style="padding-right:10px" class="input-group-addon">
-                            <i class="fa fa-calendar"></i>
+                          <div class="input-group date">
+                            <label style="padding-right:10px;padding-left: 10px">From: </label>
+                            <div style="padding-right:10px" class="input-group-addon">
+                              <i class="fa fa-calendar"></i>
+                            </div>
+                            <input style="margin-right:10px;" type="text" data-provide="datepicker" class="form-control col-3 " style="font-size:13px" autocomplete="off" name="datefrom" id="dtefrom" value="<?php echo $date_from; ?>">
+
+                            <label style="padding-right:10px">To:</label>
+                            <div style="padding-right:10px" class="input-group-addon">
+                              <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="text" style="margin-right:50px;" class="form-control col-3 " data-provide="datepicker" autocomplete="off" name="dateto" id="dteto" value="<?php echo $date_to; ?>">
+
+
                           </div>
-                          <input style="margin-right:10px;" type="text" data-provide="datepicker" class="form-control col-3 " style="font-size:13px" autocomplete="off" name="datefrom" id="dtefrom" value="<?php echo $date_from; ?>">
 
-                          <label style="padding-right:10px">To:</label>
-                          <div style="padding-right:10px" class="input-group-addon">
-                            <i class="fa fa-calendar"></i>
+                          <div class="input-group date">
+
+
+                            <label style="padding-right:10px;padding-left: 10px">OR No: </label>
+                            <div style="padding-right:12px" class="input-group-addon">
+
+                            </div>
+                            <div class="col-md-3">
+                              <input type="text" class="form-control" id="ornomas" name="ornomas" placeholder="OR NO." value="<?php echo $ornomas; ?>" required>
+                            </div>
                           </div>
-                          <input type="text" style="margin-right:50px;" class="form-control col-3 " data-provide="datepicker" autocomplete="off" name="dateto" id="dteto" value="<?php echo $date_to; ?>">
 
 
+                          <div class="input-group date">
+                            <label style="padding-right:30px;padding-left: 10px">BRGY: </label>
+
+
+                            <div class="col-md-3">
+                              <!-- <label>Barangay: </label> -->
+                              <select class="form-control select2" id="barangay" style="width: 100%;" name="barangay" value="<?php echo $barangay; ?>" required>
+                                <option value="" selected="selected">Select Barangay</option>
+                                <?php while ($get_brgy = $get_all_brgy_data->fetch(PDO::FETCH_ASSOC)) { ?>
+                                  <option value="<?php echo $get_brgy['brgy']; ?>"><?php echo $get_brgy['brgy']; ?></option>
+
+                                <?php } ?>
+
+                              </select>
+
+
+                            </div>
+
+
+                            <button id="list_payments" onClick="loadhistory()" class="btn btn-success"><i class="fa fa-search"></i></button>
+                            <!-- <input  id="person_ornomas" value="<?php echo $ornomas; ?>"> -->
+                            <label style="padding-right:10px;padding-left: 10px"> </label>
+                            <a class="btn btn-danger btn-md" style="float:right;" target="blank" id="printlink" class="btn btn-success bg-gradient-success" href="../plugins/jasperreport/payments.php?ornomas=<?php echo $ornomas; ?>&datefrom=<?php echo $date_from; ?>&dateto=<?php echo $date_to; ?>">
+
+                              <i class="nav-icon fa fa-print"></i></a>
+                          </div>
+
+                          <div class="input-group date">
+
+
+                            <label style="padding-right:10px;padding-left: 5px">COUNT: </label>
+                            <div style="padding-right:12px" class="input-group-addon">
+
+                            </div>
+                            <div class="col-md-1">
+                              <input type="text" readonly class="form-control" id="count" name="count" placeholder="count">
+                            </div>
+
+                            <label style="padding-right:10px;padding-left: 5px">TOTAL: </label>
+                            <div style="padding-right:5px" class="input-group-addon">
+
+                            </div>
+                            <div class="col-md-1">
+                              <input type="text" readonly class="form-control" id="amount" name="amount" placeholder="Amount">
+                            </div>
+                          </div>
+
+
+
+                          <div class="table-responsive">
+
+
+
+                            <table style="overflow-x: auto;" id="users" name="user" class="table table-bordered table-striped">
+                              <thead align="center">
+
+
+
+                                <th> OBJID </th>
+                                <th> NAME</th>
+                                <th> DATE</th>
+                                <th> OR#</th>
+                                <th> AMOUNT </th>
+                                <th> BRGY. </th>
+                                <th> Options </th>
+
+
+                              </thead>
+                              <tbody id="daily_payment">
+
+                              </tbody>
+                            </table>
+
+
+                          </div>
                         </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
 
-                        <div class="input-group date">
+            </div>
+
+          </div>
 
 
-                          <label style="padding-right:10px;padding-left: 10px">OR No: </label>
-                          <div style="padding-right:12px" class="input-group-addon">
+          <!-- YEARLY PAYMENT -->
+          <div class="tab-pane fade" id="nav-yearly" role="tabpanel" aria-labelledby="nav-yearly-tab">
+            <div class="card">
+              <div class="card-body">
+                <div class="box box-primary">
+                  <form role="form" method="POST" action="<?php htmlspecialchars("PHP_SELF"); ?>">
+                    <div class="box-body">
+                      <div class="row">
+                        <div class="col-12" style="margin-bottom:30px;padding:auto;">
+
+
+                          <div class="input-group date">
+                            <label style="padding-right:10px;padding-left: 10px">From: </label>
+                            <div style="padding-right:10px" class="input-group-addon">
+                              <i class="fa fa-calendar"></i>
+                            </div>
+                            <input style="margin-right:10px;" type="text" data-provide="datepicker" class="form-control col-3 " style="font-size:13px" autocomplete="off" name="datefrom" id="dtefrom" value="<?php echo $date_from; ?>">
+
+                            <label style="padding-right:10px">To:</label>
+                            <div style="padding-right:10px" class="input-group-addon">
+                              <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="text" style="margin-right:50px;" class="form-control col-3 " data-provide="datepicker" autocomplete="off" name="dateto" id="dteto" value="<?php echo $date_to; ?>">
+
 
                           </div>
-                          <div class="col-md-3">
-                            <input type="text" class="form-control" id="ornomas" name="ornomas" placeholder="OR NO." value="<?php echo $ornomas; ?>" required>
+
+                          <div class="input-group date">
+
+
+                            <label style="padding-right:10px;padding-left: 10px">OR No: </label>
+                            <div style="padding-right:12px" class="input-group-addon">
+
+                            </div>
+                            <div class="col-md-3">
+                              <input type="text" class="form-control" id="ornomas" name="ornomas" placeholder="OR NO." value="<?php echo $ornomas; ?>" required>
+                            </div>
+                          </div>
+
+
+                          <div class="input-group date">
+                            <label style="padding-right:30px;padding-left: 10px">BRGY: </label>
+
+
+                            <div class="col-md-3">
+                              <!-- <label>Barangay: </label> -->
+                              <select class="form-control select2" id="barangay" style="width: 100%;" name="barangay" value="<?php echo $barangay; ?>" required>
+                                <option value="" selected="selected">Select Barangay</option>
+                                <?php while ($get_brgy = $get_all_brgy_data->fetch(PDO::FETCH_ASSOC)) { ?>
+                                  <option value="<?php echo $get_brgy['brgy']; ?>"><?php echo $get_brgy['brgy']; ?></option>
+
+                                <?php } ?>
+
+                              </select>
+
+
+                            </div>
+
+
+                            <button id="list_payments" onClick="loadhistory()" class="btn btn-success"><i class="fa fa-search"></i></button>
+                            <!-- <input  id="person_ornomas" value="<?php echo $ornomas; ?>"> -->
+                            <label style="padding-right:10px;padding-left: 10px"> </label>
+                            <a class="btn btn-danger btn-md" style="float:right;" target="blank" id="printlink" class="btn btn-success bg-gradient-success" href="../plugins/jasperreport/payments.php?ornomas=<?php echo $ornomas; ?>&datefrom=<?php echo $date_from; ?>&dateto=<?php echo $date_to; ?>">
+
+                              <i class="nav-icon fa fa-print"></i></a>
+                          </div>
+
+                          <div class="input-group date">
+
+
+                            <label style="padding-right:10px;padding-left: 5px">COUNT: </label>
+                            <div style="padding-right:12px" class="input-group-addon">
+
+                            </div>
+                            <div class="col-md-1">
+                              <input type="text" readonly class="form-control" id="count" name="count" placeholder="count">
+                            </div>
+
+                            <label style="padding-right:10px;padding-left: 5px">TOTAL: </label>
+                            <div style="padding-right:5px" class="input-group-addon">
+
+                            </div>
+                            <div class="col-md-1">
+                              <input type="text" readonly class="form-control" id="amount" name="amount" placeholder="Amount">
+                            </div>
+                          </div>
+
+
+
+                          <div class="table-responsive">
+
+
+
+                            <table style="overflow-x: auto;" id="users2" name="user" class="table table-bordered table-striped">
+                              <thead align="center">
+
+
+
+                                <th> OBJID </th>
+                                <th> NAME</th>
+                                <th> DATE</th>
+                                <th> OR#</th>
+                                <th> AMOUNT </th>
+                                <th> BRGY. </th>
+                                <th> Options </th>
+
+
+                              </thead>
+                              <tbody id="daily_payment">
+
+                              </tbody>
+                            </table>
+
+
                           </div>
                         </div>
-
-
-                        <div class="input-group date">
-                          <label style="padding-right:30px;padding-left: 10px">BRGY: </label>
-
-
-                          <div class="col-md-3">
-                            <!-- <label>Barangay: </label> -->
-                            <select class="form-control select2" id="barangay" style="width: 100%;" name="barangay" value="<?php echo $barangay; ?>" required>
-                              <option value="" selected="selected">Select Barangay</option>
-                              <?php while ($get_brgy = $get_all_brgy_data->fetch(PDO::FETCH_ASSOC)) { ?>
-                                <option value="<?php echo $get_brgy['brgy']; ?>"><?php echo $get_brgy['brgy']; ?></option>
-
-                              <?php } ?>
-
-                            </select>
-
-
-                          </div>
-
-
-                          <button id="list_payments" onClick="loadhistory()" class="btn btn-success"><i class="fa fa-search"></i></button>
-                          <!-- <input  id="person_ornomas" value="<?php echo $ornomas; ?>"> -->
-                          <label style="padding-right:10px;padding-left: 10px"> </label>
-                          <a class="btn btn-danger btn-md" style="float:right;" target="blank" id="printlink" class="btn btn-success bg-gradient-success" href="../plugins/jasperreport/payments.php?ornomas=<?php echo $ornomas; ?>&datefrom=<?php echo $date_from; ?>&dateto=<?php echo $date_to; ?>">
-
-                            <i class="nav-icon fa fa-print"></i></a>
-                        </div>
-
-                        <div class="input-group date">
-
-
-                          <label style="padding-right:10px;padding-left: 5px">COUNT: </label>
-                          <div style="padding-right:12px" class="input-group-addon">
-
-                          </div>
-                          <div class="col-md-1">
-                            <input type="text" readonly class="form-control" id="count" name="count" placeholder="count">
-                          </div>
-
-                          <label style="padding-right:10px;padding-left: 5px">TOTAL: </label>
-                          <div style="padding-right:5px" class="input-group-addon">
-
-                          </div>
-                          <div class="col-md-1">
-                            <input type="text" readonly class="form-control" id="amount" name="amount" placeholder="Amount">
-                          </div>
-                        </div>
-
-
-
-                        <div class="table-responsive">
-
-
-
-                          <table style="overflow-x: auto;" id="users" name="user" class="table table-bordered table-striped">
-                            <thead align="center">
-
-
-
-                              <th> OBJID </th>
-                              <th> NAME</th>
-                              <th> DATE</th>
-                              <th> OR#</th>
-                              <th> AMOUNT </th>
-                              <th> BRGY. </th>
-                              <th> Options </th>
-
-
-                            </thead>
-                            <tbody id="daily_payment">
-
-                            </tbody>
-                          </table>
-
-
-                        </div>
-                </form>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
-
-          </div>
-        </div>
-
-
-
-
-        <!-- YEARLY PAYMENT -->
-
-        <div class="tab-pane fade " id="nav-yearly" role="tabpanel" aria-labelledby="nav-yearly-tab">
-
-
-          <div class="card-body">
-            <div class="box box-primary">
-              <form role="form" method="POST" action="<?php htmlspecialchars("PHP_SELF"); ?>">
-                <div class="box-body">
-                  <div class="row">
-                    <div class="col-12" style="margin-bottom:30px;padding:auto;">
-
-
-                      <div class="input-group date">
-                        <label style="padding-right:10px;padding-left: 10px">From: </label>
-                        <div style="padding-right:10px" class="input-group-addon">
-                          <i class="fa fa-calendar"></i>
-                        </div>
-                        <input style="margin-right:10px;" type="text" data-provide="datepicker" class="form-control col-3 " style="font-size:13px" autocomplete="off" name="datefrom" id="dtefrom" value="<?php echo $date_from; ?>">
-
-                        <label style="padding-right:10px">To:</label>
-                        <div style="padding-right:10px" class="input-group-addon">
-                          <i class="fa fa-calendar"></i>
-                        </div>
-                        <input type="text" style="margin-right:50px;" class="form-control col-3 " data-provide="datepicker" autocomplete="off" name="dateto" id="dteto" value="<?php echo $date_to; ?>">
-
-
-                      </div>
-
-                      <div class="input-group date">
-
-
-                        <label style="padding-right:10px;padding-left: 10px">OR No: </label>
-                        <div style="padding-right:12px" class="input-group-addon">
-
-                        </div>
-                        <div class="col-md-3">
-                          <input type="text" class="form-control" id="ornomas" name="ornomas" placeholder="OR NO." value="<?php echo $ornomas; ?>" required>
-                        </div>
-                      </div>
-
-
-                      <div class="input-group date">
-                        <label style="padding-right:30px;padding-left: 10px">BRGY: </label>
-
-
-                        <div class="col-md-3">
-                          <!-- <label>Barangay: </label> -->
-                          <select class="form-control select2" id="barangay" style="width: 100%;" name="barangay" value="<?php echo $barangay; ?>" required>
-                            <option value="" selected="selected">Select Barangay</option>
-                            <?php while ($get_brgy = $get_all_brgy_data->fetch(PDO::FETCH_ASSOC)) { ?>
-                              <option value="<?php echo $get_brgy['brgy']; ?>"><?php echo $get_brgy['brgy']; ?></option>
-
-                            <?php } ?>
-
-                          </select>
-
-
-                        </div>
-
-
-                        <button id="list_payments" onClick="loadhistory()" class="btn btn-success"><i class="fa fa-search"></i></button>
-                        <!-- <input  id="person_ornomas" value="<?php echo $ornomas; ?>"> -->
-                        <label style="padding-right:10px;padding-left: 10px"> </label>
-                        <a class="btn btn-danger btn-md" style="float:right;" target="blank" id="printlink" class="btn btn-success bg-gradient-success" href="../plugins/jasperreport/payments.php?ornomas=<?php echo $ornomas; ?>&datefrom=<?php echo $date_from; ?>&dateto=<?php echo $date_to; ?>">
-
-                          <i class="nav-icon fa fa-print"></i></a>
-                      </div>
-
-                      <div class="input-group date">
-
-
-                        <label style="padding-right:10px;padding-left: 5px">COUNT: </label>
-                        <div style="padding-right:12px" class="input-group-addon">
-
-                        </div>
-                        <div class="col-md-1">
-                          <input type="text" readonly class="form-control" id="count" name="count" placeholder="count">
-                        </div>
-
-                        <label style="padding-right:10px;padding-left: 5px">TOTAL: </label>
-                        <div style="padding-right:5px" class="input-group-addon">
-
-                        </div>
-                        <div class="col-md-1">
-                          <input type="text" readonly class="form-control" id="amount" name="amount" placeholder="Amount">
-                        </div>
-                      </div>
-
-
-
-                      <div class="table-responsive">
-
-
-
-                        <table style="overflow-x: auto;" id="users" name="user" class="table table-bordered table-striped">
-                          <thead align="center">
-
-
-
-                            <th> OBJID </th>
-                            <th> NAME</th>
-                            <th> DATE</th>
-                            <th> OR#</th>
-                            <th> AMOUNT </th>
-                            <th> BRGY. </th>
-                            <th> Options </th>
-
-
-                          </thead>
-                          <tbody id="daily_payment">
-
-                          </tbody>
-                        </table>
-
-
-                      </div>
-              </form>
-            </div>
           </div>
 
+
         </div>
-
-
-
-
-        <br>
       </section>
 
-      <br>
+
+
+
     </div>
-    <!-- /.content-wrapper -->
+
     <?php include('footer.php') ?>
 
   </div>
@@ -450,58 +454,24 @@ $get_all_brgy_data->execute();
       'ordering': true,
       'info': true,
       'autoWidth': true,
-      'autoHeight': true,
-      initComplete: function() {
-        this.api().columns([5]).every(function() {
-          var column = this;
-          var select = $('<select class="form-control select2"><option value="">show all</option></select>')
-            .appendTo('#combo')
-            .on('change', function() {
-              var val = $.fn.dataTable.util.escapeRegex(
-                $(this).val()
-              );
-              column
-                .search(val ? '^' + val + '$' : '', true, false)
-                .draw();
-            });
-          column.data().unique().sort().each(function(d, j) {
-            select.append('<option value="' + d + '">' + d + '</option>')
-          });
-        });
-      }
+      'autoHeight': true
+     
 
     });
     $('.select2').select2();
 
-    $('#users1').DataTable({
+    $('#users2').DataTable({
       'paging': true,
       'lengthChange': true,
       'searching': true,
       'ordering': true,
       'info': true,
       'autoWidth': true,
-      'autoHeight': true,
-      initComplete: function() {
-        this.api().columns([4]).every(function() {
-          var column = this;
-          var select = $('<select class="form-control select2"><option value="">show all</option></select>')
-            .appendTo('#combo')
-            .on('change', function() {
-              var val = $.fn.dataTable.util.escapeRegex(
-                $(this).val()
-              );
-              column
-                .search(val ? '^' + val + '$' : '', true, false)
-                .draw();
-            });
-          column.data().unique().sort().each(function(d, j) {
-            select.append('<option value="' + d + '">' + d + '</option>')
-          });
-        });
-      }
+      'autoHeight': true
+   
 
     });
-    $('.select2').select2();
+
 
     // $('#addPUM').on('hidden.bs.modal', function() {
     //   $('#addPUM form')[0].reset();
