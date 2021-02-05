@@ -28,7 +28,7 @@ $time = date('H:i:s');
 $now = new DateTime();
 
 $objid = $objid1 = $masname = $person_status =  $entity_no  =  $address  =
-  $contact_number  = $fullname = $date_from = $date_to = $ornomas = $mobile_no = $ydate_from = $ydate_to = $barangay = $ornomas1 = '';
+  $contact_number  = $fullname = $date_from = $date_to = $ornomas = $mobile_no = $ydate_from = $ydate_to = $barangay = $ornomas1 = $yornomas = '';
 
 //fetch user from database
 $get_user_sql = "SELECT * FROM tbl_users where id = :id ";
@@ -45,7 +45,9 @@ $get_all_brgy_sql = "SELECT * FROM barangay";
 $get_all_brgy_data = $con->prepare($get_all_brgy_sql);
 $get_all_brgy_data->execute();
 
-
+$get_all_brgy1_sql = "SELECT * FROM barangay";
+$get_all_brgy1_data = $con->prepare($get_all_brgy1_sql);
+$get_all_brgy1_data->execute();
 
 ?>
 
@@ -234,13 +236,13 @@ $get_all_brgy_data->execute();
                             <div style="padding-right:10px" class="input-group-addon">
                               <i class="fa fa-calendar"></i>
                             </div>
-                            <input style="margin-right:10px;" type="text" data-provide="datepicker" class="form-control col-3 " style="font-size:13px" autocomplete="off" name="datefrom" id="dtefrom" value="<?php echo $date_from; ?>">
+                            <input style="margin-right:10px;" type="text" data-provide="datepicker" class="form-control col-3 " style="font-size:13px" autocomplete="off" name="ydatefrom" id="ydtefrom" value="<?php echo $ydate_from; ?>">
 
                             <label style="padding-right:10px">To:</label>
                             <div style="padding-right:10px" class="input-group-addon">
                               <i class="fa fa-calendar"></i>
                             </div>
-                            <input type="text" style="margin-right:50px;" class="form-control col-3 " data-provide="datepicker" autocomplete="off" name="dateto" id="dteto" value="<?php echo $date_to; ?>">
+                            <input type="text" style="margin-right:50px;" class="form-control col-3 " data-provide="datepicker" autocomplete="off" name="ydateto" id="ydteto" value="<?php echo $ydate_to; ?>">
 
 
                           </div>
@@ -253,7 +255,7 @@ $get_all_brgy_data->execute();
 
                             </div>
                             <div class="col-md-3">
-                              <input type="text" class="form-control" id="ornomas" name="ornomas" placeholder="OR NO." value="<?php echo $ornomas; ?>" required>
+                              <input type="text" class="form-control" id="yornomas" name="yornomas" placeholder="OR NO." value="<?php echo $yornomas; ?>" required>
                             </div>
                           </div>
 
@@ -264,10 +266,10 @@ $get_all_brgy_data->execute();
 
                             <div class="col-md-3">
                               <!-- <label>Barangay: </label> -->
-                              <select class="form-control select2" id="barangay" style="width: 100%;" name="barangay" value="<?php echo $barangay; ?>" required>
+                              <select class="form-control select2" id="ybarangay" style="width: 100%;" name="ybarangay" value="<?php echo $ybarangay; ?>" required>
                                 <option value="" selected="selected">Select Barangay</option>
-                                <?php while ($get_brgy = $get_all_brgy_data->fetch(PDO::FETCH_ASSOC)) { ?>
-                                  <option value="<?php echo $get_brgy['brgy']; ?>"><?php echo $get_brgy['brgy']; ?></option>
+                                <?php while ($get_brgy1 = $get_all_brgy1_data->fetch(PDO::FETCH_ASSOC)) { ?>
+                                  <option value="<?php echo $get_brgy1['brgy']; ?>"><?php echo $get_brgy1['brgy']; ?></option>
 
                                 <?php } ?>
 
@@ -277,7 +279,7 @@ $get_all_brgy_data->execute();
                             </div>
 
 
-                            <button id="list_payments" onClick="loadhistory()" class="btn btn-success"><i class="fa fa-search"></i></button>
+                            <button id="ylist_payments" onClick="yloadhistory()" class="btn btn-success"><i class="fa fa-search"></i></button>
                             <!-- <input  id="person_ornomas" value="<?php echo $ornomas; ?>"> -->
                             <label style="padding-right:10px;padding-left: 10px"> </label>
                             <a class="btn btn-danger btn-md" style="float:right;" target="blank" id="printlink" class="btn btn-success bg-gradient-success" href="../plugins/jasperreport/payments.php?ornomas=<?php echo $ornomas; ?>&datefrom=<?php echo $date_from; ?>&dateto=<?php echo $date_to; ?>">
@@ -326,7 +328,7 @@ $get_all_brgy_data->execute();
 
 
                               </thead>
-                              <tbody id="daily_payment">
+                              <tbody id="yearly_payment">
 
                               </tbody>
                             </table>
@@ -523,27 +525,41 @@ $get_all_brgy_data->execute();
 
 
 
-    function loadhistory1() {
-      console.log("test");
+    function yloadhistory() {
       event.preventDefault();
-      var objid1 = $('#person_entity').val(); // dri ka mo kuha  so ok nani nard salamat kayo galibog pako ani
+      var yornomas = $('#yornomas').val();
       var ydate_from = $('#ydtefrom').val();
       var ydate_to = $('#ydteto').val();
+      var ybarangay = $('#ybarangay').val();
+      var yamount = $('#yamount').val();
 
 
-      $('#yearly_payment').load("load_yearlypayment.php", {
-          objid1: objid1, //objid 1 man imong gi gmit dri kuan nard abi nako diri sa itaas kwaon
+
+      $('#yearly_payment').load("load_yearlyreport.php", {
+          yornomas: yornomas,
           ydate_from: ydate_from,
-          ydate_to: ydate_to
+          ydate_to: ydate_to,
+          ybarangay: ybarangay,
+          yamount: yamount
+
+
+
+
         },
+
+
         function(response, status, xhr) {
           if (status == "error") {
             alert(msg + xhr.status + " " + xhr.statusText);
             console.log(msg + xhr.status + " " + xhr.statusText);
             console.log("xhr=" + xhr.responseText);
           }
+
+
         });
+
     }
+    
 
 
 
