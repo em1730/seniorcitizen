@@ -8,7 +8,9 @@ date_default_timezone_set('Asia/Manila');
 $date = date('Y-m-d');
 $time = date('H:i:s');
 $now = new DateTime();
-$alert_msg = '';
+$alert_msg1 = '';
+
+
 
 
 
@@ -17,7 +19,7 @@ if (isset($_POST['insert_dailypayment'])) {
     // echo "<pre>";
     // print_r($_POST);
     // echo "</pre>";
-    $alert_msg = ' ';
+    $alert_msg1 = ' ';
     //insert to tbl_individual
     $objid1 = $_POST['objid1'];
     $date_payment = date('Y-m-d', strtotime($_POST['date_payment']));
@@ -99,13 +101,16 @@ if (isset($_POST['insert_dailypayment'])) {
 
    
 
-    $alert_msg .= ' 
-        <div class="alert alert-success alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <i class="fa fa-check"></i>
-                <strong> Success ! </strong> Data Inserted.
-        </div>    
-      ';
+
+    $alert_msg1 .= ' 
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <i class="fa fa-check"></i>
+            <strong> Success ! </strong> Data Inserted.
+    </div>    
+  ';
+
+     
 
 
 

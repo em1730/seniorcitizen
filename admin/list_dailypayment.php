@@ -58,6 +58,8 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
   <?php include('heading.php'); ?>
 
 
+
+
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -67,7 +69,15 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+  
       <div class="content-header"></div>
+      <div class="float-topright">
+                <?php echo "$alert_msg"; ?>
+            </div>
+
+            <div class="float-topright">
+                <?php echo "$alert_msg1"; ?>
+            </div>
 
       <section class="content">
         <div class="card card-info">
@@ -296,6 +306,8 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
   <script src="../plugins/datatables/dataTables.bootstrap4.js"></script>
   <!-- Select2 -->
   <script src="../plugins/select2/select2.full.min.js"></script>
+
+  
 
   <script>
     // $('#users').DataTable({
