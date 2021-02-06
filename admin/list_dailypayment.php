@@ -69,15 +69,15 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-  
+
       <div class="content-header"></div>
       <div class="float-topright">
-                <?php echo "$alert_msg"; ?>
-            </div>
+        <?php echo "$alert_msg"; ?>
+      </div>
 
-            <div class="float-topright">
-                <?php echo "$alert_msg1"; ?>
-            </div>
+      <div class="float-topright">
+        <?php echo "$alert_msg1"; ?>
+      </div>
 
       <section class="content">
         <div class="card card-info">
@@ -108,11 +108,11 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
                       <thead align="center">
 
                         <th> OBJID </th>
-                        
+
                         <th> FULLNAME </th>
                         <th> BARANGAY </th>
-           
-               
+
+
                         <th> Options</th>
 
                       </thead>
@@ -137,7 +137,7 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
     </div><!-- /.content-wrapper -->
 
 
-    
+
 
     <div class="modal fade" id="delete_member" role="dialog" data-backdrop="static" data-keyboard="false">
       <div class="modal-dialog modal-sm">
@@ -155,7 +155,7 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
                 </div>
 
 
-                
+
               </div>
             </div>
             <div class="modal-footer">
@@ -164,7 +164,7 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
             </div>
           </form>
 
-          
+
         </div>
       </div> <!-- /.modal-content -->
     </div> <!-- /.modal-dialog -->
@@ -186,8 +186,11 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
                 <div class="form-group">
                   <label>ID:</label>
                   <input readonly="true" type="text" name="objid1" id="objid1" class="form-control" value="<?php echo $objid; ?>" required>
+                </div>
+
+                <div class="form-group">
+                  <label>Name:</label>
                   <input readonly type="text" name="fullname1" id="fullname1" class="form-control">
-                
                 </div>
 
                 <div class="col-lg-7">
@@ -198,7 +201,7 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
                     </div>
                     <input type="text" class="form-control pull-right" id="datepicker" name="date_payment" placeholder="Date Process" value="<?php echo $now->format('Y-m-d'); ?>">
                   </div>
-                </div>
+                </div><br>
                 <div class="form-group">
                   <label>OR NUMBER:</label>
                   <input type="text" name="ornomas1" id="ornomas" class="form-control">
@@ -239,8 +242,10 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
                 <div class="form-group">
                   <label>ID:</label>
                   <input readonly="true" type="text" name="objid2" id="objid2" class="form-control" value="<?php echo $objid; ?>" required>
+                </div>
+                <div class="form-group">
+                  <label>Name:</label>
                   <input readonly type="text" name="lastname" id="lastname" class="form-control">
-                
                 </div>
 
                 <div class="col-lg-7">
@@ -251,7 +256,7 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
                     </div>
                     <input type="text" class="form-control pull-right" id="datepicker" name="dateyeardue" placeholder="Date Process" value="<?php echo $now->format('Y-m-d'); ?>">
                   </div>
-                </div>
+                </div><br>
                 <div class="form-group">
                   <label>OR NUMBER:</label>
                   <input type="text" name="oryeardue" id="oryeardue" class="form-control">
@@ -307,7 +312,7 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
   <!-- Select2 -->
   <script src="../plugins/select2/select2.full.min.js"></script>
 
-  
+
 
   <script>
     // $('#users').DataTable({
@@ -332,7 +337,7 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
 
     // }
 
-  
+
     var dataTable = $('#users').DataTable({
 
       page: true,
@@ -351,7 +356,7 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
             b.responseText +
             " c=" +
             c.responseText
-            
+
           );
         }
       },
@@ -360,13 +365,12 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
           targets: -1,
           data: null,
 
-          defaultContent: '<button class="btn btn-outline-success btn-sm editIndividual" style = "margin-right:10px;"  id = "modal" data-placement="top" title="ADD DAILY PAYMENT"> DY</i></button>'
-           + '<button class="btn btn-outline-success btn-sm editIndividual" style = "margin-right:10px;"  id = "modal1" data-placement="top" title="ADD YEARLY PAYMENT"> YR</i></button>'
-           +
-          '<button class="btn btn-outline-success btn-sm editIndividual" style = "margin-right:10px;"  id = "view_dailypayment" data-placement="top" title="ADD"> <i class="fa fa-folder"></i></button>'
-          + '<button class="btn btn-danger delete btn-sm" data-placement="top" title="Delete Record"><i class="fa fa-trash-o"></i></button>'
+          defaultContent: '<button class="btn btn-outline-success btn-sm editIndividual" style = "margin-right:10px;"  id = "modal" data-placement="top" title="ADD DAILY PAYMENT"> DY</i></button>' +
+            '<button class="btn btn-outline-success btn-sm editIndividual" style = "margin-right:10px;"  id = "modal1" data-placement="top" title="ADD YEARLY PAYMENT"> YR</i></button>' +
+            '<button class="btn btn-outline-success btn-sm editIndividual" style = "margin-right:10px;"  id = "view_dailypayment" data-placement="top" title="ADD"> <i class="fa fa-folder"></i></button>' +
+            '<button class="btn btn-danger delete btn-sm" data-placement="top" title="Delete Record"><i class="fa fa-trash-o"></i></button>'
 
-            
+
         },
         //   defaultContent: '<button class="btn btn-outline-success btn-sm editIndividual" style = "margin-right:10px;"  id = "viewIndividual" data-placement="top" title="Edit Individual"> <i class="fa fa-edit"></i></button>' +
         //     '<a class="btn btn-outline-success btn-sm printlink"  style = "margin-right:10px;" id="printlink" href ="../plugins/jasperreport/entity_id.php?entity_no=" data-placement="top" target="_blank" title="Print ID">  <i class="nav-icon fa fa-print"></i></a> ' + checkViewHistory() + checkDelete() +
@@ -393,14 +397,14 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
       var objid1 = currow.find("td:eq(0)").text();
       var fullname = currow.find("td:eq(1)").text();
       var barangay = currow.find("td:eq(2)").text();
-   
-      
-     
+
+
+
       console.log("test");
       $('#modalupdate').modal('show');
       $('#objid1').val(objid1);
       $('#fullname1').val(fullname);
-    
+
 
     });
 
@@ -412,12 +416,12 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
       var objid2 = currow.find("td:eq(0)").text();
       var yfullname = currow.find("td:eq(1)").text();
 
-     
+
       console.log("test");
       $('#modalyeardue').modal('show');
       $('#objid2').val(objid2);
       $('#lastname').val(yfullname);
-    
+
 
     });
 
@@ -482,7 +486,7 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
 
     // });
 
-    
+
 
     // $(document).on('click', 'button[data-role=delete_member]', function(event) {
     //   event.preventDefault();
