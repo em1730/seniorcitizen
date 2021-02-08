@@ -4,11 +4,14 @@ include('../config/db_config.php');
 
 
 
+
 date_default_timezone_set('Asia/Manila');
 $date = date('Y-m-d');
 $time = date('H:i:s');
 $now = new DateTime();
 $alert_msg1 = '';
+
+
 
 
 
@@ -46,7 +49,6 @@ if (isset($_POST['insert_dailypayment'])) {
     
     ";
 
-
     $dailypayment_data = $con->prepare($insert_dailypayment_sql);
     $dailypayment_data->execute([
 
@@ -62,7 +64,14 @@ if (isset($_POST['insert_dailypayment'])) {
 
     ]);
 
-
+    $dailypayment_data = $con->prepare($insert_dailypayment_sql);
+    if($dailypayment_data)
+    {
+    
+    
+    $_SESSION['status'] = "PAYMENT ADDED";
+    $_SESSION['status'] = 'success';
+    }
 
     //INSERT USER LOGS TABLE
 
@@ -83,6 +92,8 @@ if (isset($_POST['insert_dailypayment'])) {
     ";
 
 
+
+
     $userlogs_data = $con->prepare($insert_userlogs_sql);
     $userlogs_data->execute([
 
@@ -100,7 +111,7 @@ if (isset($_POST['insert_dailypayment'])) {
     ]);
 
    
-
+  
 
     $alert_msg1 .= ' 
     <div class="alert alert-success alert-dismissible">
@@ -113,9 +124,6 @@ if (isset($_POST['insert_dailypayment'])) {
      
 
 
-
-
-    // echo print_r($objid1);
 
 
 }

@@ -72,12 +72,9 @@ while ($result = $user_data->fetch(PDO::FETCH_ASSOC)) {
   
       <div class="content-header"></div>
       <div class="float-topright">
-                <?php echo "$alert_msg"; ?>
-            </div>
-
-            <div class="float-topright">
                 <?php echo "$alert_msg1"; ?>
             </div>
+
 
       <section class="content">
         <div class="card card-info">
