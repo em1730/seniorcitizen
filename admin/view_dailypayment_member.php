@@ -285,7 +285,7 @@ while ($result = $get_data_data->fetch(PDO::FETCH_ASSOC)) {
           <div class="modal-footer">
             <button type="button" class="btn btn-default pull-left bg-olive" data-dismiss="modal">No</button>
             <input type="submit" name="deletepayment" class="btn btn-danger" value="Yes">
-          </div>
+          </div> 
         </form>
       </div>
     </div>

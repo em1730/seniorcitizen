@@ -11,7 +11,7 @@ if (isset($_POST['objid'])) {
 
     $get_all_history_data = $con->prepare($get_all_history_sql);
     $get_all_history_data->execute();
-
+ 
 
     while ($list_history = $get_all_history_data->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr>";
