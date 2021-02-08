@@ -256,7 +256,7 @@ $get_all_brgy1_data->execute();
 
                             </div>
                             <div class="col-md-3">
-                              <input type="text" class="form-control" id="yornomas" name="yornomas" placeholder="OR NO." value="<?php echo $yornomas; ?>" required>
+                              <input type="text" class="form-control" id="yornomas" name="yornomas" placeholder="OR NO." value="<?php echo $yornomas; ?>">
                             </div>
                           </div>
 
@@ -267,7 +267,7 @@ $get_all_brgy1_data->execute();
 
                             <div class="col-md-3">
                               <!-- <label>Barangay: </label> -->
-                              <select class="form-control select2" id="ybarangay" style="width: 100%;" name="ybarangay" value="<?php echo $ybarangay; ?>" required>
+                              <select class="form-control select2" id="ybarangay" style="width: 100%;" name="ybarangay" value="<?php echo $ybarangay; ?>">
                                 <option value="" selected="selected">Select Barangay</option>
                                 <?php while ($get_brgy1 = $get_all_brgy1_data->fetch(PDO::FETCH_ASSOC)) { ?>
                                   <option value="<?php echo $get_brgy1['brgy']; ?>"><?php echo $get_brgy1['brgy']; ?></option>
@@ -566,7 +566,7 @@ $get_all_brgy1_data->execute();
 
 //DELETE DAILYPAYMENT
     $(function() {
-      $(document).on('click', '.delete', function(e) {
+      $(document).on('click', '.delete_daily', function(e) {
         e.preventDefault();
 
         var currow = $(this).closest("tr");
@@ -581,7 +581,7 @@ $get_all_brgy1_data->execute();
 
     //DELETE YEARLYPAYMENT
     $(function() {
-      $(document).on('click', '.delete_yearly', function(e) {
+      $(document).on('click', '.delete', function(e) {
         e.preventDefault();
 
         var currow = $(this).closest("tr");

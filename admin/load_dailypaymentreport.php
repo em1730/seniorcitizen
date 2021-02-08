@@ -87,7 +87,7 @@ if($barangay=='' && $ornomas != ''){
         echo $list_barangay['barangay'];
         echo "</td>";
         echo "<td>";
-        echo "<button class='btn btn-danger delete btn-sm' data-placement='top' id='delete' title='Delete Record'><i class='fa fa-trash-o'></i></button>";
+        echo "<button class='btn btn-danger delete_daily btn-sm' data-placement='top' id='delete' title='Delete Record'><i class='fa fa-trash-o'></i></button>";
         
         echo "</td>";
      
