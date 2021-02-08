@@ -4,6 +4,7 @@ include('../config/db_config.php');
 include('sql_queries.php');
 
 include('delete_payment.php');
+include('delete_yearlypayment.php');
 
 
 // include('list_individual.php');
@@ -390,7 +391,7 @@ $get_all_brgy1_data->execute();
 
 
 
-  <div class="modal fade" id="delete_PUMl" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal fade" id="delete_yearlypayment" role="dialog" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
@@ -401,7 +402,8 @@ $get_all_brgy1_data->execute();
             <div class="box-body">
               <div class="form-group">
                 <label>Delete Record?</label>
-                <input readonly="true" type="text" name="user_id" id="user_id" class="form-control">
+                <input readonly="true" type="text" name="yfullname2" id="yfullname2" class="form-control">
+                <input readonly="true" type="text" name="yobjid" id="yobjid" class="form-control">
               </div>
             </div>
           </div>
@@ -409,7 +411,7 @@ $get_all_brgy1_data->execute();
 
             <button type="button" class="btn btn-default pull-left bg-olive" data-dismiss="modal">No</button>
             <!-- <button type="submit" name="delete_user" class="btn btn-danger">Yes</button> -->
-            <input type="submit" name="delete_pum" class="btn btn-danger" value="Yes">
+            <input type="submit" name="delete_yearly" class="btn btn-danger" value="Yes">
           </div>
         </form>
       </div>
@@ -562,7 +564,7 @@ $get_all_brgy1_data->execute();
     
 
 
-
+//DELETE DAILYPAYMENT
     $(function() {
       $(document).on('click', '.delete', function(e) {
         e.preventDefault();
@@ -573,6 +575,21 @@ $get_all_brgy1_data->execute();
         $('#delete_member').modal('show');
         $('#objid5').val(objid5);
         $('#fullname2').val(fullname2);
+      });
+    });
+
+
+    //DELETE YEARLYPAYMENT
+    $(function() {
+      $(document).on('click', '.delete_yearly', function(e) {
+        e.preventDefault();
+
+        var currow = $(this).closest("tr");
+        var yobjid = currow.find("td:eq(0)").text();
+        var yfullname2 = currow.find("td:eq(1)").text();
+        $('#delete_yearlypayment').modal('show');
+        $('#yobjid').val(yobjid);
+        $('#yfullname2').val(yfullname2);
       });
     });
 

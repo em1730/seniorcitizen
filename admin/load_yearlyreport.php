@@ -171,7 +171,7 @@ if($ybarangay !='' && $yornomas == '' && $ydate_from != '' && $ydate_to != '') {
         echo $list_brgy['barangay'];
         echo "</td>";
         echo "<td>";
-        echo "<button class='btn btn-danger delete btn-sm' data-placement='top' id='delete' title='Delete Record'><i class='fa fa-trash-o'></i></button>";
+        echo "<button class='btn btn-danger delete_yearly btn-sm' data-placement='top' id='delete' title='Delete Record'><i class='fa fa-trash-o'></i></button>";
         
         echo "</td>";
      
