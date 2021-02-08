@@ -266,7 +266,7 @@ while ($result = $get_data_data->fetch(PDO::FETCH_ASSOC)) {
 
 
   <!-- DAILY PAYMENT MODAL -->
-  <div class="modal fade" id="delete_member" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal fade" id="delete_membermodal" role="dialog" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
@@ -278,7 +278,7 @@ while ($result = $get_data_data->fetch(PDO::FETCH_ASSOC)) {
             <div class="box-body">
               <div class="form-group">
                 <label>Delete Record?</label>
-                <input readonly="true" type="text" name="objid6" id="objid6" class="form-control">
+                <input readonly="true" type="text" name="payment_delete" id="payment_delete" class="form-control">
               </div>
             </div>
           </div>
@@ -426,17 +426,6 @@ while ($result = $get_data_data->fetch(PDO::FETCH_ASSOC)) {
 
     }
 
-    // $('#users tbody').on('click', 'button.printlink', function() {
-    //   // alert ('hello');
-    //   var row = $(this).closest('tr');
-
-    //   var data = table.row($(this).parents('tr')).data();
-    //   //  alert (data[0]);
-    //   //  var data = $('#users').DataTable().row('.selected').data(); //table.row(row).data().docno;
-    //   var objid = data[0];
-    //   window.open("dailypayment.php?objid=" + objid + '_parent');
-    // });
-
     function loadhistory1() {
       console.log("test");
       event.preventDefault();
@@ -465,13 +454,13 @@ while ($result = $get_data_data->fetch(PDO::FETCH_ASSOC)) {
 
     // DELETE DAILYPAYMENT
     $(function() {
-      $(document).on('click', '.delete', function(e) {
+      $(document).on('click', '.delete_dailypayment', function(e) {
         e.preventDefault();
 
         var currow = $(this).closest("tr");
         var objid = currow.find("td:eq(0)").text();
-        $('#delete_member').modal('show');
-        $('#objid6').val(objid);
+        $('#delete_membermodal').modal('show');
+        $('#payment_delete').val(objid);
       });
     });
 
@@ -479,7 +468,7 @@ while ($result = $get_data_data->fetch(PDO::FETCH_ASSOC)) {
 
     // DELETE YEARLY PAYMENT
     $(function() {
-      $(document).on('click', '.delete', function(e) {
+      $(document).on('click', '.delete_yearlypayment', function(e) {
         e.preventDefault();
 
         var currow = $(this).closest("tr");

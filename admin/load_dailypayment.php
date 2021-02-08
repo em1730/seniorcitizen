@@ -28,7 +28,7 @@ if (isset($_POST['objid'])) {
         echo $list_history['amountmas'];
         echo "</td>";
         echo "<td>";
-        echo "<button class='btn btn-danger delete btn-sm' data-placement='top' id='delete' title='Delete Record'><i class='fa fa-trash-o'></i></button>";
+        echo "<button class='btn btn-danger delete_dailypayment btn-sm' data-placement='top' id='delete_payment' name='delete_payment' title='Delete Record'><i class='fa fa-trash-o'></i></button>";
         
         echo "</td>";
         echo "</tr>";
