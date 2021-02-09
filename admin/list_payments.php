@@ -119,7 +119,7 @@ $get_all_brgy1_data->execute();
                             <input type="text" style="margin-right:50px;" class="form-control col-3 " data-provide="datepicker" autocomplete="off" name="dateto" id="dteto" value="<?php echo $date_to; ?>">
 
 
-                          </div>
+                          </div><br>
 
                           <div class="input-group date">
 
@@ -131,7 +131,7 @@ $get_all_brgy1_data->execute();
                             <div class="col-md-3">
                               <input type="text" class="form-control" id="ornomas" name="ornomas" placeholder="OR NO." value="<?php echo $ornomas; ?>" required>
                             </div>
-                          </div>
+                          </div><br>
 
 
                           <div class="input-group date">
@@ -159,7 +159,7 @@ $get_all_brgy1_data->execute();
                             <a class="btn btn-danger btn-md" style="float:right;" target="blank" id="printlink" class="btn btn-success bg-gradient-success" href="../plugins/jasperreport/payments.php?ornomas=<?php echo $ornomas; ?>&datefrom=<?php echo $date_from; ?>&dateto=<?php echo $date_to; ?>">
 
                               <i class="nav-icon fa fa-print"></i></a>
-                          </div>
+                          </div><br> 
 
                           <div class="input-group date">
 
@@ -179,7 +179,7 @@ $get_all_brgy1_data->execute();
                             <div class="col-md-1">
                               <input type="text" readonly class="form-control" id="amount" name="amount" placeholder="Amount">
                             </div>
-                          </div>
+                          </div><br>
 
 
 
@@ -246,7 +246,7 @@ $get_all_brgy1_data->execute();
                             <input type="text" style="margin-right:50px;" class="form-control col-3 " data-provide="datepicker" autocomplete="off" name="ydateto" id="ydteto" value="<?php echo $ydate_to; ?>">
 
 
-                          </div>
+                          </div><br>
 
                           <div class="input-group date">
 
@@ -258,7 +258,7 @@ $get_all_brgy1_data->execute();
                             <div class="col-md-3">
                               <input type="text" class="form-control" id="yornomas" name="yornomas" placeholder="OR NO." value="<?php echo $yornomas; ?>">
                             </div>
-                          </div>
+                          </div><br>
 
 
                           <div class="input-group date">
@@ -286,7 +286,7 @@ $get_all_brgy1_data->execute();
                             <a class="btn btn-danger btn-md" style="float:right;" target="blank" id="printlink" class="btn btn-success bg-gradient-success" href="../plugins/jasperreport/payments.php?ornomas=<?php echo $ornomas; ?>&datefrom=<?php echo $date_from; ?>&dateto=<?php echo $date_to; ?>">
 
                               <i class="nav-icon fa fa-print"></i></a>
-                          </div>
+                          </div><br>
 
                           <div class="input-group date">
 
@@ -306,7 +306,7 @@ $get_all_brgy1_data->execute();
                             <div class="col-md-1">
                               <input type="text" readonly class="form-control" id="amount" name="amount" placeholder="Amount">
                             </div>
-                          </div>
+                          </div><br>
 
 
 
